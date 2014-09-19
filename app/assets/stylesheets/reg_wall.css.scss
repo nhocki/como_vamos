@@ -1,0 +1,32 @@
+.reg-wall{
+  padding: 5em 0 0;
+  text-align: center;
+
+  h2{
+    font-family: $serif;
+    font-size: 3.1em;
+    line-height: 1.5em;
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: lighter;
+    margin-bottom: 2em;
+
+    span{
+      font-style: italic;
+    }
+  }
+
+  .login{
+    font-family: $serif;
+    font-size: 1.75em;
+    line-height: 1.5em;
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: lighter;
+    margin-bottom: 3em;
+  }
+
+  p{
+    // margin-bottom: 2.75em;
+  }
+}
