@@ -18,3 +18,7 @@ group :development do
   gem 'spring', '~> 1.1.3'
   gem "quiet_assets", "~> 1.0.3"
 end
+
+group :development, :test do
+  gem "rspec-rails", "~> 3.1.0"
+end
