@@ -1,0 +1,41 @@
+%nav-section{
+  padding: 1em;
+  padding-bottom: 1em;
+}
+
+nav.top{
+  @include fill-parent;
+  @include clearfix;
+  background: $gray;
+  padding: 0 2em 0 1em;
+  margin-bottom: 2em;
+
+  ul{
+    float: left;
+    text-align: left;
+  }
+
+  li{
+    display: inline-block;
+    a{ @extend %nav-section; }
+  }
+
+  a{
+    color: white;
+    display: inline-block;
+    height: 100%;
+    font-weight: bold;
+    &:hover{
+      color: darken(white, 20);
+    }
+  }
+
+  h6.session{
+    @include clearfix;
+    @extend %nav-section;
+
+    color: rgba(255,255,255,0.6);
+    float: right;
+    font-weight: bold;
+  }
+}
