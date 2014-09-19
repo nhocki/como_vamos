@@ -1,7 +1,18 @@
+html{
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+}
+
 body{
   margin: 0;
+  height: 100%;
 }
 
 .wrapper{
   @include outer-container;
+}
+
+#content{
+  padding-bottom: 2em + $footer-height;
 }

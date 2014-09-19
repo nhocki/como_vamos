@@ -1,0 +1,16 @@
+footer{
+  @include fill-parent;
+  height: $footer-height;
+  background: darken($gray, 20);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  vertical-align: middle;
+  line-height: $footer-height;
+  a{
+    color: white;
+    &:hover{
+      color: darken(white, 20);
+    }
+  }
+}
