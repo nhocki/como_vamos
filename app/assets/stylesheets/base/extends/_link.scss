@@ -1,0 +1,6 @@
+@mixin link($color, $hover) {
+  color: $color;
+  &:hover, &:focus {
+    color: $hover;
+  }
+}
