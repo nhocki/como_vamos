@@ -1,6 +1,15 @@
 $sidebar-columns: 3;
 .sidebar{
   @include span-columns($sidebar-columns);
+
+  ul li{
+    margin-bottom: 0.75em;
+
+    a {
+      display: block;
+      @include link($base-font-color, $link-color);
+    }
+  }
 }
 
 .with-sidebar{
