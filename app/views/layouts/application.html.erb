@@ -10,9 +10,11 @@
   <%= render 'header' %>
 
   <section id='content' class='wrapper'>
-    <%= render 'sidebar' %>
+    <%= content_or_partial :sidebar %>
 
-    <%= yield %>
+    <div class="with-sidebar">
+      <%= yield %>
+    </div>
   </section>
 
   <%= render 'footer' %>
