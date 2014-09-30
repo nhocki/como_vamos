@@ -15,8 +15,13 @@ body{
 
 #content{
   padding-bottom: 2em + $footer-height;
+  @include outer-container;
 }
 
 .small {
   font-size: 0.75 * $base-font-size;
 }
+
+@import "header";
+@import "footer";
+@import "sidebar";
