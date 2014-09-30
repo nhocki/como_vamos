@@ -8,9 +8,13 @@
 </head>
 <body>
   <%= render 'header' %>
+
   <section id='content' class='wrapper'>
+    <%= render 'sidebar' %>
+
     <%= yield %>
   </section>
+
   <%= render 'footer' %>
 </body>
 </html>

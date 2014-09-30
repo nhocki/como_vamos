@@ -1,0 +1,8 @@
+$sidebar-columns: 3;
+.sidebar{
+  @include span-columns($sidebar-columns);
+}
+
+.with-sidebar{
+  @include span-columns($grid-columns - $sidebar-columns);
+}
