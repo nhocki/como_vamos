@@ -16,3 +16,7 @@ body{
 #content{
   padding-bottom: 2em + $footer-height;
 }
+
+.small {
+  font-size: 0.75 * $base-font-size;
+}
