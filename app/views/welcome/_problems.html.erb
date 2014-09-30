@@ -1,0 +1,18 @@
+<section class='problems'>
+  <% 5.times do %>
+    <div class='problem'>
+      <h5>
+        <%= random_problem %>
+        <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
+      </h5>
+
+      <span>Uva Online Judge</span>
+
+      <div class='categories'>
+        <% random_category(3).each do |category| %>
+          <span class='category success'><%= category %></span>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</section>

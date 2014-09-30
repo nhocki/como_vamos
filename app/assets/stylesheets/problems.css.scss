@@ -1,0 +1,21 @@
+.problems{
+  .problem{
+    padding-bottom: 18px;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 17px;
+
+    h5 span{
+      color: $gray;
+      font-weight: lighter;
+    }
+  }
+}
+
+.categories{
+  @extend %badges;
+  .category{
+    @extend %badge;
+    cursor: pointer;
+    margin: 0 1px;
+  }
+}
