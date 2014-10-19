@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    render json: env["omniauth.auth"].to_json
+    user = User.from_omniauth(env["omniauth.auth"])
+    login_user!(user)
+    redirect_to root_path, notice: "You've been logged in!"
   end
 end
