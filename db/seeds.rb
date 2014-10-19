@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+categories = [
+  "Ad Hoc",
+  "Backtracking",
+  "Complete Search",
+  "Dynamic Programming",
+  "Graphs",
+  "Greedy",
+  "Hashes",
+  "Search",
+  "Simulation",
+  "Sorting",
+]
+
+categories.each do |category_name|
+  Category.where(name: category_name).first_or_create
+end
