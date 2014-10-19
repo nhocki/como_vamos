@@ -1,0 +1,24 @@
+.users{
+  @include outer-container;
+  margin-top: 3em;
+}
+
+.user{
+  @include span-columns(3 of 6);
+  @include outer-container;
+  padding-bottom: 2em;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 2em;
+  .avatar{
+    @include span-columns(1 of 4)
+  }
+
+  .info{
+   @include span-columns(3 of 4);
+   h5{
+    margin-bottom: 1.4em;
+    color: $dark-gray;
+   }
+   color: $gray;
+  }
+}
