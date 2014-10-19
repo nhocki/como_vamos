@@ -17,21 +17,10 @@ module ApplicationHelper
   end
 
   def random_category(limit = 1)
-    categories.sample(limit)
+    sidebar_categories.sample(limit)
   end
 
-  def categories
-    [
-      "dynamic programming",
-      "graphs",
-      "greedy",
-      "complete search",
-      "ad hoc",
-      "simulation",
-      "backtracking",
-      "hashes",
-      "search",
-      "sorting",
-    ].sort
+  def sidebar_categories
+    Category.order('name')
   end
 end
