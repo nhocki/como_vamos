@@ -1,7 +1,11 @@
 <section class='sidebar'>
-  <ul>
-    <% categories.each do |category| %>
-      <li><%= link_to category.titleize, '#' %></li>
-    <% end %>
-  </ul>
+  <%= cache 'sidebar_categories' do %>
+    <ul>
+      <% sidebar_categories.each do |category| %>
+        <%= content_tag_for(:li, category) do %>
+          <%= link_to category.name.titleize, '#' %>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
 </section>
