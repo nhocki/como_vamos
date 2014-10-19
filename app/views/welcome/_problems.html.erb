@@ -2,7 +2,7 @@
   <% 5.times do %>
     <div class='problem'>
       <h5>
-        <%= random_problem %>
+        <%= link_to random_problem %>
         <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
       </h5>
 
@@ -10,7 +10,9 @@
 
       <div class='categories'>
         <% random_category(3).each do |category| %>
-          <span class='category success'><%= category.name %></span>
+          <span class='category success'>
+            <%= link_to category.name %>
+          </span>
         <% end %>
       </div>
     </div>
