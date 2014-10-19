@@ -44,6 +44,9 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.1)
     friendly_id (5.0.4)
@@ -134,6 +137,7 @@ DEPENDENCIES
   bitters (~> 0.10.1)
   bourbon (~> 3.2.3)
   coffee-rails (~> 4.0.0)
+  dotenv-rails (~> 1.0.2)
   friendly_id (~> 5.0.4)
   jquery-rails (~> 3.1.2)
   neat (~> 1.5.1)
