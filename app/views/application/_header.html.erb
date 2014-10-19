@@ -8,7 +8,11 @@
     </ul>
 
     <h6 class='session'>
-      Logged in as <%= link_to 'Nicolás Hock' %>
+      <% if logged_in? %>
+        Logged in as <%= link_to current_user.name %>
+      <% else %>
+        Signin with <%= link_to "GitHub", login_path(:github) %>
+      <% end %>
     </h6>
   </div>
 </nav>

@@ -4,6 +4,10 @@ module ApplicationHelper
     content_for?(content) ? content_for(content) : render( content.to_s)
   end
 
+  def login_path(provider = :github)
+    "/auth/#{provider}"
+  end
+
   def random_problem
     [
       "100 - The 3n + 1 problem",

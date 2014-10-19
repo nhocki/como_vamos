@@ -13,4 +13,14 @@ class ApplicationController < ActionController::Base
   helper_method def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+  helper_method def logged_in?
+    !!current_user
+  end
+
+  def require_not_logged_in!
+    if logged_in? && !params[:force]
+      redirect_to root_url and return
+    end
+  end
 end
