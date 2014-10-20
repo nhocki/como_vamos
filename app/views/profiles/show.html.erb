@@ -1,0 +1,20 @@
+<h1>Your Profile</h1>
+
+<%= form_for @user, as: :profile, url: profile_path, method: :patch do |f| %>
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Mr. Smith" %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "mr_smith" %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email %>
+    <%= f.text_field :email, placeholder: "smith@example.com" %>
+  </div>
+
+  <%= f.submit "Update Profile" %>
+<% end %>

@@ -32,6 +32,10 @@ en:
       signin_with: "Signin with"
     footer:
       open_source: "This site is open source. Help us make it better!"
+  profiles:
+    update:
+      success: "Your profile was updated!"
+      error: "We couldn't update your profile."
   sessions:
     create:
       success: "You've been logged in!"

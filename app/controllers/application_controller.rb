@@ -23,4 +23,10 @@ class ApplicationController < ActionController::Base
       redirect_to root_url and return
     end
   end
+
+  def require_login!
+    if !logged_in? || params[:force]
+      redirect_to root_url, alert: I18n.t("application.login_required") and return
+    end
+  end
 end

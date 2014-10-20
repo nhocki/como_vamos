@@ -22,6 +22,10 @@ body{
   font-size: 0.75 * $base-font-size;
 }
 
+.field{
+  margin: 1.5em 0;
+}
+
 @import "header";
 @import "footer";
 @import "sidebar";
