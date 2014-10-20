@@ -1,5 +1,5 @@
 <%= div_for user do %>
-  <%= link_to user do %>
+  <%= link_to user, alt: "#{user.name} profile" do %>
     <div class='avatar'><%= image_tag user.avatar %></div>
     <div class='info'>
       <h5><%= user.name %></h5>

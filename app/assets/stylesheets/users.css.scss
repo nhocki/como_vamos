@@ -9,16 +9,29 @@
   padding-bottom: 2em;
   border-bottom: 1px solid $light-gray;
   margin-bottom: 2em;
-  .avatar{
-    @include span-columns(1 of 4)
-  }
 
-  .info{
-   @include span-columns(3 of 4);
-   h5{
-    margin-bottom: 1.4em;
-    color: $dark-gray;
-   }
-   color: $gray;
+  a{
+    display: block;
+
+    .avatar{
+      @include span-columns(1 of 4);
+    }
+
+    .info{
+     @include span-columns(3 of 4);
+     color: $gray;
+
+     h5{
+      @include transition (all 0.2s linear);
+      color: $dark-gray;
+      margin-bottom: 1.4em;
+     }
+    }
+
+    &:hover, &:focus{
+      h5{
+        color: $link-color;
+      }
+    }
   }
 }
