@@ -9,8 +9,14 @@
 
     <h6 class='session'>
       <% if logged_in? %>
-        <%= t('.logged_in_as') %>
-        <%= link_to current_user.name, profile_path %>
+        <div>
+          <%= t('.logged_in_as') %>
+          <%= link_to current_user.name, profile_path %>
+
+          <span class='small logout'>
+            (<%= link_to t('.logout'), logout_path %>)
+          </span>
+        </div>
       <% else %>
         <%= t('.signin_with') %>
         <%= link_to "GitHub", login_path(:github) %>

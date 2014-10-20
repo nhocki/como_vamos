@@ -30,6 +30,7 @@ en:
       problems: "Problems"
       logged_in_as: "Logged in as"
       signin_with: "Signin with"
+      logout: "Log out"
     footer:
       open_source: "This site is open source. Help us make it better!"
   profiles:
@@ -39,3 +40,5 @@ en:
   sessions:
     create:
       success: "You've been logged in!"
+    destroy:
+      success: "Hope to see you back soon!"

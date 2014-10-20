@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
   private
 
   def login_user!(user)
-    @current_user = nil
+    logout_user!
     session[:user_id] = user.id
+  end
+
+  def logout_user!
+    @current_user = session[:user_id] = nil
   end
 
   helper_method def current_user

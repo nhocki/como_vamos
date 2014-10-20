@@ -1,3 +1,8 @@
+def mock_omniauth!
+  OmniAuth.config.test_mode = true
+  mock_github_omniauth
+end
+
 def mock_github_omniauth
   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
     provider: "github",
