@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application:
+    login_required: "You must login first."
+    sidebar:
+      categories: "Categories"
+    header:
+      judges: "Judges"
+      users: "Users"
+      problems: "Problems"
+      logged_in_as: "Logged in as"
+      signin_with: "Signin with"
+    footer:
+      open_source: "This site is open source. Help us make it better!"
+  sessions:
+    create:
+      success: "You've been logged in!"

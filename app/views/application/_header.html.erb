@@ -2,16 +2,18 @@
   <div class='wrapper'>
     <ul class='main'>
       <li><%= link_to "¿Cómo Vamos?", root_path %></li>
-      <li><%= link_to "Judges" %></li>
-      <li><%= link_to "Problems" %></li>
-      <li><%= link_to "Users", users_path %></li>
+      <li><%= link_to t(".judges") %></li>
+      <li><%= link_to t(".problems") %></li>
+      <li><%= link_to t(".users"), users_path %></li>
     </ul>
 
     <h6 class='session'>
       <% if logged_in? %>
-        Logged in as <%= link_to current_user.name %>
+        <%= t('.logged_in_as') %>
+        <%= link_to current_user.name, profile_path %>
       <% else %>
-        Signin with <%= link_to "GitHub", login_path(:github) %>
+        <%= t('.signin_with') %>
+        <%= link_to "GitHub", login_path(:github) %>
       <% end %>
     </h6>
   </div>
