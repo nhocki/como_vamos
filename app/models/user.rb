@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     gravatar_id = Digest::MD5.hexdigest(email.downcase)
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
+
+  def should_generate_new_friendly_id?
+    username_changed?
+  end
 end

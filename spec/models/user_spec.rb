@@ -6,6 +6,12 @@ RSpec.describe User, :type => :model do
     it { expect validate_presence_of([ :username, :name, :provider, :email, :provider_uid ]) }
   end
 
+  it "changes the slug when the username changes" do
+    user = create(:user)
+    user.username = "foo"
+    expect { user.save }.to change(user, :slug).to("foo")
+  end
+
   describe ".from_omniauth" do
     let(:omniauth_hash) do
       {
