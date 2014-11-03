@@ -1,4 +1,4 @@
-<h1>Your Profile</h1>
+<h1><%= t('.your_profile') %></h1>
 
 <%= form_for @user, as: :profile, url: profile_path, method: :patch do |f| %>
   <div class='field'>
@@ -16,5 +16,5 @@
     <%= f.text_field :email, placeholder: "smith@example.com" %>
   </div>
 
-  <%= f.submit "Update Profile" %>
+  <%= f.submit t('.update_btn') %>
 <% end %>

@@ -34,6 +34,9 @@ en:
     footer:
       open_source: "This site is open source. Help us make it better!"
   profiles:
+    show:
+      your_profile: "Your Profile"
+      update_btn: "Update Profile"
     update:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
