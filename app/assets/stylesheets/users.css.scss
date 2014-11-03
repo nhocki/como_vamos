@@ -1,0 +1,37 @@
+.users{
+  @include outer-container;
+  margin-top: 3em;
+}
+
+.user{
+  @include span-columns(3 of 6);
+  @include outer-container;
+  padding-bottom: 2em;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 2em;
+
+  a{
+    display: block;
+
+    .avatar{
+      @include span-columns(1 of 4);
+    }
+
+    .info{
+     @include span-columns(3 of 4);
+     color: $gray;
+
+     h5{
+      @include transition (all 0.2s linear);
+      color: $dark-gray;
+      margin-bottom: 1.4em;
+     }
+    }
+
+    &:hover, &:focus{
+      h5{
+        color: $link-color;
+      }
+    }
+  }
+}

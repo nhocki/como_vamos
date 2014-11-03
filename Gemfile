@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.2"
+ruby "2.1.3"
 
 gem 'rails', '4.1.6'
 gem 'pg', '~> 0.17.1'
@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.1.2'
 gem "friendly_id", "~> 5.0.4"
+gem "omniauth-github", "~> 1.1.2"
 
 # Styling. Thanks Thoughtbot!
 gem "bitters", "~> 0.10.1"
@@ -22,6 +23,9 @@ end
 
 group :development, :test do
   gem "rspec-rails", "~> 3.1.0"
+  gem "dotenv-rails", "~> 1.0.2"
+  gem "factory_girl_rails", "~> 4.5.0"
+  gem "capybara", "~> 2.4.4"
 end
 
 group :test do

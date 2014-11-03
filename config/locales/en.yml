@@ -20,4 +20,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application:
+    login_required: "You must login first."
+    sidebar:
+      categories: "Categories"
+    header:
+      judges: "Judges"
+      users: "Users"
+      problems: "Problems"
+      logged_in_as: "Logged in as"
+      signin_with: "Signin with"
+      logout: "Log out"
+    footer:
+      open_source: "This site is open source. Help us make it better!"
+  profiles:
+    show:
+      your_profile: "Your Profile"
+      update_btn: "Update Profile"
+    update:
+      success: "Your profile was updated!"
+      error: "We couldn't update your profile."
+  sessions:
+    create:
+      success: "You've been logged in!"
+    destroy:
+      success: "Hope to see you back soon!"

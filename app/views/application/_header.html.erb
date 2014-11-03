@@ -1,14 +1,26 @@
 <nav class='top'>
   <div class='wrapper'>
     <ul class='main'>
-      <li><%= link_to "¿Cómo Vamos?" %></li>
-      <li><%= link_to "Judges" %></li>
-      <li><%= link_to "Problems" %></li>
-      <li><%= link_to "Users" %></li>
+      <li><%= link_to "¿Cómo Vamos?", root_path %></li>
+      <li><%= link_to t(".judges") %></li>
+      <li><%= link_to t(".problems") %></li>
+      <li><%= link_to t(".users"), users_path %></li>
     </ul>
 
     <h6 class='session'>
-      Logged in as <%= link_to 'Nicolás Hock' %>
+      <% if logged_in? %>
+        <div>
+          <%= t('.logged_in_as') %>
+          <%= link_to current_user.name, profile_path, class: 'edit-profile' %>
+
+          <span class='small logout'>
+            (<%= link_to t('.logout'), logout_path %>)
+          </span>
+        </div>
+      <% else %>
+        <%= t('.signin_with') %>
+        <%= link_to "GitHub", login_path(:github) %>
+      <% end %>
     </h6>
   </div>
 </nav>

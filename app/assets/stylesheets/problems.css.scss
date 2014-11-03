@@ -8,6 +8,10 @@
       color: $gray;
       font-weight: lighter;
     }
+
+    h5 a{
+      @include link(darken($base-font-color, 70), lighten($base-font-color, 25));
+    }
   }
 }
 

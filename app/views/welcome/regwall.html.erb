@@ -5,12 +5,10 @@
   </h2>
 
   <section class='login'>
-    You can sign in with <%= link_to "GitHub" %>
+    You can sign in with <%= link_to "GitHub", login_path(:github) %>
   </section>
 
-  <% 1.times do %>
   <p class='small'>
-    You can still browse for <%= link_to "problems" %> & <%= link_to "solutions" %> as a guest, but won't be able to submit them.
+    You can still browse for <%= link_to "problems" %> & <%= link_to "solutions" %> as a guest, but won't be able to submit any content.
   </p>
-  <% end %>
 </section>

@@ -1,5 +1,7 @@
 <section class='sidebar'>
-  <%= cache 'sidebar_categories' do %>
+  <%= cache localized_key('sidebar_categories') do %>
+    <h3><%= t('.categories') %></h3>
+
     <ul>
       <% sidebar_categories.each do |category| %>
         <%= content_tag_for(:li, category) do %>

@@ -71,3 +71,18 @@ $form-font-family: $base-font-family;
 
 // Layout Variables
 $footer-height: 5em;
+
+// Badges
+$badge-background: $medium-gray;
+$badge-dark-color: $dark-gray;
+$badge-error-color: $error-color;
+$badge-notice-color: $notice-color;
+$badge-success-color: $success-color;
+$badge-font-color: #fff;
+$badge-font-size: $base-font-size * .75;
+
+// Grid
+$grid-columns: 12;
+$sidebar-columns: 3;
+$content-columns: $grid-columns - $sidebar-columns;
+// $visual-grid: true;
