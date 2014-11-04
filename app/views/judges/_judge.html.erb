@@ -1,0 +1,8 @@
+<%= div_for judge do %>
+  <h5>
+    <%= link_to judge.name, judge %>
+    <span class='links'>( <%= website_link_for judge %> )</span>
+  </h5>
+
+  <div class='info'><%= pluralize judge.problems_count, I18n.t('problem') %></div>
+<% end %>

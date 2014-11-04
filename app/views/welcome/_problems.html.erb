@@ -6,7 +6,7 @@
         <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
       </h5>
 
-      <span>Uva Online Judge</span>
+      <div class='judge'><%= link_to random_judge.name, random_judge %></div>
 
       <div class='categories'>
         <% random_category(3).each do |category| %>

@@ -12,14 +12,20 @@
     h5 a{
       @include link(darken($base-font-color, 70), lighten($base-font-color, 25));
     }
-  }
-}
 
-.categories{
-  @extend %badges;
-  .category{
-    @extend %badge;
-    cursor: pointer;
-    margin: 0 1px;
+    .judge a{
+      display: block;
+      margin: 0.2em 0;
+      @include link($base-font-color, darken($link-color, 25));
+    }
+  }
+
+  .categories{
+    @extend %badges;
+    .category{
+      @extend %badge;
+      cursor: pointer;
+      margin: 0 1px;
+    }
   }
 }

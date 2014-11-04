@@ -31,4 +31,8 @@ module ApplicationHelper
   def sidebar_categories
     Category.order('name')
   end
+
+  def random_judge
+    Judge.all.sample
+  end
 end

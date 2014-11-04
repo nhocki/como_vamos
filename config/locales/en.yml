@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  problem: "Problem"
   application:
     login_required: "You must login first."
     sidebar:
@@ -40,6 +41,13 @@ en:
     update:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
+  judges:
+    judge: #judge partial
+      go_to_website: "Visit %{name} website"
+      website: "Website"
+    index:
+      title: "Judges"
+      add_judge: "Add Judge"
   sessions:
     create:
       success: "You've been logged in!"
