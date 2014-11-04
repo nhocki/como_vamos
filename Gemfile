@@ -32,3 +32,4 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 gem "font-awesome-sass", "~> 4.2.2"
+gem "simple_form", "~> 3.0.2"
