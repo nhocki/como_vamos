@@ -8,7 +8,7 @@ RSpec.describe Judge, :type => :model do
   end
 
   it "has friendy id" do
-    judge = Judge.create(name: 'Uva Online Judge')
+    judge = create(:judge, name: 'Uva Online Judge')
     expect(Judge.friendly.find('uva-online-judge')).to eql(judge)
   end
 end
