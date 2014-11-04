@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resource  :profile, only: [ :show, :update ]
   resources :users, only: [ :index, :show ]
-  resources :judges, only: [ :index, :show ]
+  resources :judges, only: [ :index, :show, :new, :create ]
 
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: :logout
