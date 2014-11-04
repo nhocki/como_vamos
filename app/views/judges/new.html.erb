@@ -1,0 +1,7 @@
+<h1><%= t('.title') %></h1>
+
+<%= simple_form_for @judge do |f| %>
+  <%= f.input :name, placeholder: "Cómo Vamos Judge" %>
+  <%= f.input :url,  placeholder: "https://judge.comovamos.co" %>
+  <%= f.button :submit %>
+<% end %>

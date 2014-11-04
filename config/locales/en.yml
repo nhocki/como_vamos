@@ -21,6 +21,11 @@
 
 en:
   problem: "Problem"
+  url: "URL"
+  activerecord:
+    attributes:
+      judge:
+        url: "URL"
   application:
     login_required: "You must login first."
     sidebar:
@@ -48,6 +53,8 @@ en:
     index:
       title: "Judges"
       add_judge: "Add Judge"
+    new:
+      title: "New Judge"
   sessions:
     create:
       success: "You've been logged in!"
