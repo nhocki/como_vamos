@@ -3,4 +3,5 @@ class Judge < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   validates :name, presence: true, uniqueness: true
+  validates :url, presence: true
 end

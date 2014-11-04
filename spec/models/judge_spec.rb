@@ -4,6 +4,7 @@ RSpec.describe Judge, :type => :model do
   describe "validations" do
     it { expect validate_uniqueness_of(:name) }
     it { expect validate_presence_of(:name) }
+    it { expect validate_presence_of(:url) }
   end
 
   it "has friendy id" do

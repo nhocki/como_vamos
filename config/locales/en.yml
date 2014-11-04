@@ -47,6 +47,9 @@ en:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
   judges:
+    create:
+      success: "Your judge has been created!"
+      error: "There were some problems, fix them before continuing."
     judge: #judge partial
       go_to_website: "Visit %{name} website"
       website: "Website"
