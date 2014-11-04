@@ -31,3 +31,4 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
 end
+gem "font-awesome-sass", "~> 4.2.2"
