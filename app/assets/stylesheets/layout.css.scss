@@ -28,7 +28,17 @@ body{
 
 .section{
   @include outer-container;
-  margin-top: 3em;
+}
+
+.title{
+  @include outer-container;
+  margin-bottom: 1em;
+}
+
+.subtitle{
+  @include outer-container;
+  margin-top: -1.3em;
+  margin-bottom: 2em;
 }
 
 @import "header";
