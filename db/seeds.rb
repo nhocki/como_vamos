@@ -17,6 +17,7 @@ categories = [
   "Search",
   "Simulation",
   "Sorting",
+  "Other",
 ]
 
 categories.each do |category_name|
