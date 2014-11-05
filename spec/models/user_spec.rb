@@ -7,9 +7,9 @@ RSpec.describe User, :type => :model do
   end
 
   it "changes the slug when the username changes" do
-    user = create(:user)
-    user.username = "foo"
-    expect { user.save }.to change(user, :slug).to("foo")
+    user = create(:user, username: "foo")
+    user.username = "bar"
+    expect { user.save }.to change(user, :slug).from("foo").to("bar")
   end
 
   describe ".from_omniauth" do

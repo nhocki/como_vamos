@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
+  private
+
   def should_generate_new_friendly_id?
     username_changed?
   end
