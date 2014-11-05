@@ -1,20 +1,9 @@
 <h1><%= t('.your_profile') %></h1>
 
-<%= form_for @user, as: :profile, url: profile_path, method: :patch do |f| %>
-  <div class='field'>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "Mr. Smith" %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :username %>
-    <%= f.text_field :username, placeholder: "mr_smith" %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :email %>
-    <%= f.text_field :email, placeholder: "smith@example.com" %>
-  </div>
+<%= simple_form_for @user, as: :profile, url: profile_path, method: :patch do |f| %>
+  <%= f.input :name, placeholder: "Mr. Smith" %>
+  <%= f.input :username, placeholder: "mr_smith" %>
+  <%= f.input :email, placeholder: "smith@example.com" %>
 
   <%= f.submit t('.update_btn') %>
 <% end %>

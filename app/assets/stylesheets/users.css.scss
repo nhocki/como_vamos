@@ -1,6 +1,5 @@
 .users{
-  @include outer-container;
-  margin-top: 3em;
+  @extend .section;
 }
 
 .user{

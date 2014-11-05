@@ -76,3 +76,14 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+.field_with_errors{
+  #{$all-text-inputs}{
+    border: 1px solid rgba(255, 10, 10, 0.8);
+  }
+
+  .error {
+    display: inline-block;
+    margin-top: -0.5em;
+  }
+}

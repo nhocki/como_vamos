@@ -26,6 +26,11 @@ body{
   margin: 1.5em 0;
 }
 
+.section{
+  @include outer-container;
+  margin-top: 3em;
+}
+
 @import "header";
 @import "footer";
 @import "sidebar";

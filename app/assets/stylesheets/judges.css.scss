@@ -1,0 +1,28 @@
+.judges{
+  @include outer-container;
+  margin-top: 2em;
+
+  .judge{
+    @include outer-container;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 1.5em;
+
+    a {
+      @include link($base-font-color, darken($link-color, 20));
+    }
+
+    h5 {
+      margin-bottom: 0.5em;
+      .links {
+        color: $medium-gray;
+        font-weight: normal;
+        display: inline-block;
+        @extend .small;
+        a {
+          @include link(darken($medium-gray, 40), darken($link-color, 20));
+        }
+      }
+    }
+  }
+}

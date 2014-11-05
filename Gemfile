@@ -15,6 +15,8 @@ gem "omniauth-github", "~> 1.1.2"
 gem "bitters", "~> 0.10.1"
 gem "bourbon", "~> 3.2.3"
 gem "neat", "~> 1.5.1"
+gem "font-awesome-sass", "~> 4.2.2"
+gem "simple_form", "~> 3.0.2"
 
 group :development do
   gem 'spring', '~> 1.1.3'
