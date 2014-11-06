@@ -14,4 +14,11 @@ footer{
       color: darken(white, 20);
     }
   }
+  .author{
+    @extend .small;
+    line-height: 1em;
+    margin: 0 auto;
+    margin-top: -1 * ($footer-height - 2) / 2;
+    color: white;
+  }
 }

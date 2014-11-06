@@ -1,0 +1,44 @@
+<h1 class='title'>
+  <%= random_problem %>
+  <span class='x-small'>&nbsp; (<%= pluralize(rand(10), 'solution') %>)</span>
+</h1>
+
+<div class='subtitle'>
+  <%= link_to '#' do %>
+    <%= icon 'globe', t('.website') %>
+  <% end %>
+</div>
+
+<div class='solutions'>
+  <% 5.times do %>
+    <div class='solution'>
+      <header>
+        <%= avatar_for(random_user, size: 64) %>
+
+        <div class='info'>
+          <div class='solver'>
+            Submitted by <%= link_to 'Nicolás Hock Isaza', '#' %> on May 13, 1989.
+          </div>
+
+          <div class='actions'>
+            <span class='action show'><%= icon 'eye', 'Show Solution' %></span>
+            <span class='action'><%= icon 'edit', 'Edit' %></span>
+          </div>
+        </div>
+      </header>
+
+
+      <div class='source'>
+        <div class='explanation'>
+          <p>DP solution:</p>
+
+          <p>
+            <pre class='inline'>dp[i][j]</pre> is how many space I'm wasting using the first i songs.
+          </p>
+        </div>
+
+        <pre class='source-code'><code data-language='c'><%= sample_source_code %></code></pre>
+      </div>
+    </div>
+  <% end %>
+</div>

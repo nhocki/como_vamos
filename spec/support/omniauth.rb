@@ -1,26 +1,30 @@
-def mock_omniauth!
+def mock_omniauth!(**args)
   OmniAuth.config.test_mode = true
-  mock_github_omniauth
+  mock_github_omniauth(**args)
 end
 
-def mock_github_omniauth
+def mock_github_omniauth(info: {}, credentials: {})
+  info = {
+    nickname: "nhocki",
+    email: "nhocki@gmail.com",
+    name: "Nicolás Hock Isaza",
+    image: "https://avatars.githubusercontent.com/u/17035?v=2",
+    urls: {
+      GitHub: "https://github.com/nhocki",
+      Blog: "http://blog.nhocki.com/"
+    }
+  }.merge(info)
+
+  credentials = {
+    token: "token",
+    expires: false
+  }.merge(credentials)
+
   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
     provider: "github",
     uid: "123",
-    info: {
-      nickname: "nhocki",
-      email: "nhocki@gmail.com",
-      name: "Nicolás Hock Isaza",
-      image: "https://avatars.githubusercontent.com/u/17035?v=2",
-      urls: {
-        GitHub: "https://github.com/nhocki",
-        Blog: "http://blog.nhocki.com/"
-      }
-    },
-    credentials: {
-      token: "token",
-      expires: false
-    },
+    info: info,
+    credentials: credentials,
     extra: {
       raw_info: {
         login: "nhocki",

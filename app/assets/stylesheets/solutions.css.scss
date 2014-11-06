@@ -1,0 +1,51 @@
+%list-border{
+  padding-bottom: 18px;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 17px;
+}
+
+%action-list{
+  display: inline-block;
+  padding: 0 1em;
+  border-left: 1px solid $gray;
+  cursor: pointer;
+
+  &:first-child{
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+
+.solutions{
+  .solution{
+    @extend %list-border;
+
+    header{
+      @include outer-container;
+      .avatar{
+        float: left;
+      }
+
+      .info{
+        float: left;
+        margin-left: 1.5em;
+      }
+
+      .actions{
+        margin-top: 1.2em;
+        font-size: 0.9em;
+        .action{ @extend %action-list; }
+      }
+    }
+
+    .explanation{
+      margin-top:  18px;
+      padding-top: 18px;
+      border-top: 1px solid $light-gray;
+      @extend %list-border;
+    }
+
+    .source { display: none; }
+  }
+}
