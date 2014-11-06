@@ -22,6 +22,12 @@ body{
   font-size: 0.75 * $base-font-size;
 }
 
+.x-small {
+  font-size: 0.5 * $base-font-size;
+  line-height: $base-font-size;
+  vertical-align: middle;
+}
+
 .field{
   margin: 1.5em 0;
 }

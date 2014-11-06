@@ -1,6 +1,13 @@
-<h1 class='title'>Problems#show</h1>
+<h1 class='title'>
+  <%= random_problem %>
+  <span class='x-small'>&nbsp; (<%= pluralize(rand(10), 'solution') %>)</span>
+</h1>
 
-<div class='subtitle'><%= pluralize(rand(10), 'solution') %></div>
+<div class='subtitle'>
+  <%= link_to '#' do %>
+    <%= icon 'globe', t('.website') %>
+  <% end %>
+</div>
 
 <div class='solutions'>
   <% 5.times do %>

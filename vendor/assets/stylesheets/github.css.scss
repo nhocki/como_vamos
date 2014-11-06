@@ -4,6 +4,8 @@
  * @author Craig Campbell
  * @version 1.0.4
  */
+
+$background-color: #f8f8f8;
 pre {
     border: 1px solid #ccc;
     /*word-wrap: break-word;*/
@@ -32,7 +34,7 @@ pre code {
 pre, code {
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
     color: #333;
-    background: #f8f8f8;
+    background: $background-color;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -95,11 +97,17 @@ pre .regexp {
 }
 
 .rainbow .line:hover {
-  background-color: #171b1c;
+  background-color: darken($background-color, 10);
 }
 
 .rainbow .line:hover .line-number {
   background-color: #101313;
+}
+
+.rainbow td{
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .rainbow .line .line-number {
@@ -114,6 +122,6 @@ pre .regexp {
 }
 
 .rainbow .line .line-code {
-  padding-left: 1em;
+  padding-left: 3em;
   width: 100%;
 }

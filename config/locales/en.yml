@@ -49,6 +49,8 @@ en:
   problems:
     index:
       title: "All Problems"
+    show:
+      website: "Go to problem statement"
   judges:
     create:
       success: "Your judge has been created!"
