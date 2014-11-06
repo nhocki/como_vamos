@@ -14,14 +14,15 @@ end
 
 feature "Log out from Como Vamos" do
   before do
-    mock_omniauth!
+    mock_omniauth!(info: { name: 'Some Name' })
     login
   end
 
   scenario "The user gets logged out" do
+    expect(page).to have_content("Some Name")
     visit root_url
     click_link(I18n.t('application.header.logout'))
     expect(page).to have_content(I18n.t('sessions.destroy.success'))
-    expect(page).not_to have_content("Nicolás Hock Isaza")
+    expect(page).not_to have_content("Some Name")
   end
 end
