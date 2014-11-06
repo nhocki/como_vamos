@@ -46,6 +46,9 @@ en:
     update:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
+  problems:
+    index:
+      title: "All Problems"
   judges:
     create:
       success: "Your judge has been created!"
