@@ -29,7 +29,11 @@ module ApplicationHelper
   end
 
   def sidebar_categories
-    Category.order('name')
+    @sidebar_categories ||= Category.order('name')
+  end
+
+  def random_user
+    User.all.sample
   end
 
   def random_judge

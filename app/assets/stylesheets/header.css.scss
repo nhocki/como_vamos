@@ -29,7 +29,7 @@ nav.top{
       color: darken(white, 20);
     }
     &.active{
-      color: $light-gray;
+      color: darken($light-gray, 10);
     }
   }
 
