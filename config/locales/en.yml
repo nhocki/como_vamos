@@ -47,10 +47,19 @@ en:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
   problems:
+    create:
+      success: "The problem was created! Now add some solutions!"
+      error: "There were some problems, fix them before continuing."
     index:
       title: "All Problems"
+      add: "Add a new problem"
     show:
       website: "Go to problem statement"
+    new:
+      title: "New Problem"
+      number_hint: "The ID of the problem in the Judge"
+      title_hint: "Problem's name in the Judge"
+      select_judge: "Select Judge"
   judges:
     create:
       success: "Your judge has been created!"
