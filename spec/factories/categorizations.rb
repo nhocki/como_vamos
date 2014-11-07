@@ -1,8 +1,6 @@
 FactoryGirl.define do
   factory :categorization do
-    problem nil
-category nil
-user nil
+    problem
+    category
   end
-
 end
