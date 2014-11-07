@@ -1,9 +1,10 @@
 <h1 class='title'><%= t('.title') %></h1>
 
 <%= simple_form_for @problem do |f| %>
-  <%= f.input :judge_id, collection: Judge.all, label_method: :name, value_method: :id, prompt: t('.select_judge') %>
+  <%= f.input :judge_id, collection: Judge.all, label_method: :name, value_method: :id, prompt: t('.select_judge'), input_html: chosen_options %>
   <%= f.input :number, placeholder: "100", hint: t('.number_hint') %>
-  <%= f.input :title, placeholder: "3n + 1", hint: t('.title_hint') %>
-  <%= f.input :url,  placeholder: "http://example.com/problem/3n-plus-1.html" %>
+  <%= f.input :title,  placeholder: "3n + 1", hint: t('.title_hint') %>
+  <%= f.input :url,    placeholder: "http://example.com/problem/3n-plus-1.html" %>
+  <%= f.association :categories, collection: sidebar_categories, input_html: chosen_options %>
   <%= f.button :submit %>
 <% end %>

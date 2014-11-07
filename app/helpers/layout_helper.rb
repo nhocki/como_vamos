@@ -14,4 +14,10 @@ module LayoutHelper
     image = image_tag(user.avatar(size: size), alt: user.name)
     content_tag :div, image, class: 'avatar'
   end
+
+  def chosen_options
+    {
+      class: 'chosen-select',
+    }
+  end
 end

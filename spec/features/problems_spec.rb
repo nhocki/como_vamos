@@ -8,6 +8,7 @@ describe "Problems" do
 
   describe "Adding a problem" do
     let!(:judge) { create(:judge) }
+    let!(:category) { create(:category) }
 
     before do
       visit problems_path
@@ -19,11 +20,15 @@ describe "Problems" do
       fill_in 'problem_title', with: '3n + 1'
       fill_in 'problem_url', with: 'http://uva.onlinejudge.org/external/1/100.html'
       select judge.name, from: 'problem_judge_id'
+      select category.name, from: 'problem_category_ids'
       click_button I18n.t('helpers.submit.create', model: Problem)
       expect(page).to have_content(I18n.t('problems.create.success'))
-      expect(Problem.count).to eql(1)
       expect(page).to have_content('100 - 3n + 1')
       expect(current_path).to eql(problem_path('100-3n-1'))
+
+      problem = Problem.first
+      expect(problem).not_to be_nil
+      expect(problem.categories.pluck(:name)).to eql([ category.name ])
     end
 
     scenario 'with errors on the form' do
