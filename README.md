@@ -1,6 +1,6 @@
 # ¿Cómo Vamos?
 
-![Build Status](https://travis-ci.org/nhocki/como_vamos.svg)
+[![Build Status](https://travis-ci.org/nhocki/como_vamos.svg?branch=master)](https://travis-ci.org/nhocki/como_vamos)
 
 ¿Cómo Vamos? is an application to share solutions for competitive programming problems.
 
