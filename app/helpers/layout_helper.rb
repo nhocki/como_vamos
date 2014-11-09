@@ -20,4 +20,10 @@ module LayoutHelper
       class: 'chosen-select',
     }
   end
+
+  def category_badge(category)
+    content_tag :span, class: 'category success' do
+      link_to category.name, category
+    end
+  end
 end

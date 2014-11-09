@@ -1,0 +1,16 @@
+<%= div_for problem do %>
+  <h5>
+    <%= link_to problem.name, problem %>
+    <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
+  </h5>
+
+  <div class='judge'>
+    <%= link_to problem.judge_name, problem.judge %>
+  </div>
+
+  <div class='categories'>
+    <% problem.categories.each do |category| %>
+      <%= category_badge(category) %>
+    <% end %>
+  </div>
+<% end %>

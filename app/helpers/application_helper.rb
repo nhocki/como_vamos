@@ -13,15 +13,7 @@ module ApplicationHelper
   end
 
   def random_problem
-    [
-      "100 - The 3n + 1 problem",
-      "101 - The Blocks Problem",
-      "102 - Ecological",
-      "103 - Stacking Boxes",
-      "104 - Arbitrage",
-      "105 - The Skyline Problem",
-      "106 - Fermat vs Pythagoras",
-    ].sample
+    Problem.all.to_a.sample
   end
 
   def random_category(limit = 1)
