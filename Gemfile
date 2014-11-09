@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.1.2'
 gem "friendly_id", "~> 5.0.4"
 gem "omniauth-github", "~> 1.1.2"
+gem "carrierwave", "~> 0.10.0"
+gem "fog", "~> 1.24.0"
 
 # Styling. Thanks Thoughtbot!
 gem "bitters", "~> 0.10.1"
