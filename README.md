@@ -17,6 +17,8 @@ application, make sure you have the following env variables:
 * `SECRET_KEY_BASE`: A very long, random script for cookies. Generate one with `rake secret`.
 * `DATABASE_URL`: The URL of the production database. E.g `postgres://myuser:mypass@localhost/somedatabase`
 
+All these keys are referenced in the `config/secrets.yml` file.
+
 ---
 
 [This is a rewrite. The original can be found here.](https://github.com/andmej/como_vamos)

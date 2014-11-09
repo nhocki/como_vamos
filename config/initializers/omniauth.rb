@@ -1,5 +1,6 @@
 OmniAuth.config.logger = Rails.logger
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  secrets = Rails.application.secrets
+  provider :github, secrets.github_key, secrets.github_secret
 end
