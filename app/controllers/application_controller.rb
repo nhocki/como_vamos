@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  helper_method def full_layout?
+    !!@full_layout
+  end
+
   def login_user!(user)
     logout_user!
     session[:user_id] = user.id

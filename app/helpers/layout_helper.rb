@@ -1,4 +1,12 @@
 module LayoutHelper
+  def body_class
+    "#{params[:controller]}_controller #{params[:action]}_action"
+  end
+
+  def content_class
+    full_layout? ? 'full' : 'with-sidebar'
+  end
+
   def nav_link(name, url, options = {})
     css_class = options.fetch(:class) { "" }
     css_class << "active" if current_page?(url)

@@ -2,10 +2,13 @@ class WelcomeController < ApplicationController
   before_filter :require_not_logged_in!, only: [ :regwall ]
 
   def index
-    render :regwall, layout: 'full' unless logged_in?
+    unless logged_in?
+      @full_layout = true
+      render :regwall
+    end
   end
 
   def regwall
-    render layout: 'full'
+    @full_layout = true
   end
 end
