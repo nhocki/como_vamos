@@ -20,6 +20,6 @@ feature 'Judges' do
     fill_in 'judge_name', with: 'USACO'
     click_button I18n.t('helpers.submit.create', model: Judge)
     expect(current_path).to eql(judges_path)
-    # expect(page).to have_content('USACO')
+    expect(page).to have_content(I18n.t("judges.create.error"))
   end
 end
