@@ -11,6 +11,6 @@
 
 <div class='solutions'>
   <% 5.times do %>
-    <%= render 'solutions/solution' %>
+    <%= render random_solution if random_solution %>
   <% end %>
 </div>

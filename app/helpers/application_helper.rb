@@ -16,6 +16,10 @@ module ApplicationHelper
     Problem.all.to_a.sample
   end
 
+  def random_solution
+    Solution.all.to_a.sample
+  end
+
   def random_category(limit = 1)
     sidebar_categories.sample(limit)
   end

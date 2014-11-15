@@ -6,6 +6,21 @@ module LayoutHelper
     link_to name, url, options
   end
 
+  def formatted_date(date, format = "%B %-d, %Y")
+    date.strftime(format)
+  end
+
+  # No op. for now.
+  def markdown(text)
+    text
+  end
+
+  def solution_source(solution)
+    content_tag :code, data: {language: solution.highlight_lang} do
+      solution.source_code_content
+    end
+  end
+
   def sample_source_code
     File.read(Rails.root.join("CD_sample.cpp"))
   end
