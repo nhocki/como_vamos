@@ -7,7 +7,6 @@ CarrierWave.configure do |config|
       aws_secret_access_key:  Rails.application.secrets.aws_secret,
     }
     config.fog_directory  = Rails.application.secrets.aws_bucket
-  end
 
   elsif Rails.env.test?
     config.storage = :file
