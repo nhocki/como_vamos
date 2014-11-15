@@ -8,10 +8,13 @@ class Problem < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
+  has_many :solutions
+
   validates :title, :url, :judge_id, presence: true
   validates :number, presence: true, uniqueness: { scope: :judge_id }
 
   delegate :name, to: :judge, prefix: true
+  delegate :count, to: :solutions, prefix: true
 
   def name
     "#{number} - #{title}"

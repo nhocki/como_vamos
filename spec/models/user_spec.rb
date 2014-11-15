@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, :type => :model do
   it { expect have_many(:problems) }
+  it { expect have_many(:solutions) }
 
   describe "validations" do
     it { expect validate_uniqueness_of([ :username, :email, :provider_uid ]) }

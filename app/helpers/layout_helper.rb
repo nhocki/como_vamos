@@ -20,7 +20,7 @@ module LayoutHelper
 
   # No op. for now.
   def markdown(text)
-    text
+    simple_format(text)
   end
 
   def solution_source(solution)

@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  markdown_enabled: "You can use Markdown here."
   problem: "Problem"
   url: "URL"
   activerecord:
@@ -55,6 +56,8 @@ en:
       add: "Add a new problem"
     show:
       website: "Go to problem statement"
+      add_solution: "Add Solution"
+      solution: "Solution"
     new:
       title: "New Problem"
       number_hint: "The ID of the problem in the Judge"
@@ -72,6 +75,11 @@ en:
       add_judge: "Add Judge"
     new:
       title: "New Judge"
+  solutions:
+    new:
+      title: "New Solution"
+      subtitle: "You are adding a solution for %{problem} from %{judge}."
+      explanation_hint: "Explain how you solved the problem and any key aspects about your solution."
   sessions:
     create:
       success: "You've been logged in!"

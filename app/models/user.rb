@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   # Problems the user has created, not solved!
   has_many :problems, foreign_key: :creator_id
+  has_many :solutions
 
   def self.from_omniauth(auth)
     info = auth['info']
