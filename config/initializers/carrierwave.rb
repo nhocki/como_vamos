@@ -1,12 +1,5 @@
-if Rails.env.test?
-  CarrierWave.configure do |config|
-    config.storage = :file
-    config.enable_processing = false
-  end
-end
-
-if Rails.env.production?
-  CarrierWave.configure do |config|
+CarrierWave.configure do |config|
+  if Rails.env.production?
     config.storage = :fog
     config.fog_credentials = {
       provider:               'AWS'.freeze,
@@ -14,5 +7,10 @@ if Rails.env.production?
       aws_secret_access_key:  Rails.application.secrets.aws_secret,
     }
     config.fog_directory  = Rails.application.secrets.aws_bucket
+  end
+
+  elsif Rails.env.test?
+    config.storage = :file
+    config.enable_processing = false
   end
 end
