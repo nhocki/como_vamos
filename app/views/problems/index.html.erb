@@ -3,4 +3,4 @@
   <div class='subtitle'><%= link_to t('.add'), new_problem_path %></div>
 <% end %>
 
-<%= render 'welcome/problems' %>
+<%= render 'problems', problems: @problems %>

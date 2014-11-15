@@ -34,10 +34,10 @@ module LayoutHelper
     content_tag :div, image, class: 'avatar'
   end
 
-  def chosen_options
+  def chosen_options(extra = {})
     {
       class: 'chosen-select',
-    }
+    }.merge(extra.except(:class))
   end
 
   def category_badge(category)

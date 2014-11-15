@@ -1,1 +1,7 @@
-<%= render 'problems' %>
+<p>Hello, <%= current_user.name %></p>
+
+<p>
+  This is the list of problems you've solved.
+</p>
+
+<%= render 'problems/problems', problems: current_user.solved_problems %>
