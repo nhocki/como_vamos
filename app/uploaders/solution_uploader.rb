@@ -21,4 +21,8 @@ class SolutionUploader < CarrierWave::Uploader::Base
   def extension_white_list
     @extension ||= EXTENSION_TO_LANG.keys.map(&:to_s)
   end
+
+  def stored_on_s3?
+    storage == :fog
+  end
 end
