@@ -1,4 +1,6 @@
 <h1 class='title'><%= t('.title') %></h1>
-<div class='subtitle'><%= link_to t('.add_judge'), new_judge_path %></div>
+<% if current_user %>
+  <div class='subtitle'><%= link_to t('.add_judge'), new_judge_path %></div>
+<% end %>
 
 <div class='judges'><%= render @judges %></div>
