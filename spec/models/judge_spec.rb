@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Judge, :type => :model do
+  it { expect have_many(:problems) }
+
   describe "validations" do
     it { expect validate_uniqueness_of(:name) }
     it { expect validate_presence_of(:name) }

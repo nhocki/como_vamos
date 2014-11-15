@@ -5,8 +5,13 @@ class Problem < ActiveRecord::Base
   belongs_to :judge
   belongs_to :creator, class_name: "User"
 
-  validates :title, :url, presence: true
+  has_many :categorizations
+  has_many :categories, through: :categorizations
+
+  validates :title, :url, :judge_id, presence: true
   validates :number, presence: true, uniqueness: { scope: :judge_id }
+
+  delegate :name, to: :judge, prefix: true
 
   def name
     "#{number} - #{title}"

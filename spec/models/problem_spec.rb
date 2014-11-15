@@ -1,8 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Problem, :type => :model do
+  it { expect belong_to(:judge) }
+  it { expect belong_to(:creator) }
+  it { expect have_many(:categories) }
+  it { expect have_many(:categorizations) }
+
   describe "validations" do
-    it { expect validate_presence_of([ :title, :url, :number ]) }
+    it { expect validate_presence_of([ :title, :url, :number, :judge_id ]) }
   end
 
   it "creates the friendly id from the name" do

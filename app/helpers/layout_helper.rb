@@ -14,4 +14,16 @@ module LayoutHelper
     image = image_tag(user.avatar(size: size), alt: user.name)
     content_tag :div, image, class: 'avatar'
   end
+
+  def chosen_options
+    {
+      class: 'chosen-select',
+    }
+  end
+
+  def category_badge(category)
+    content_tag :span, class: 'category success' do
+      link_to category.name, category
+    end
+  end
 end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resource  :profile,     only: [ :show, :update ]
   resources :users,       only: [ :index, :show ]
   resources :judges,      only: [ :index, :show, :new, :create ]
-  resources :problems,    only: [ :index, :show ]
+  resources :problems,    only: [ :index, :show, :new, :create ]
   resources :categories,  only: [ :show ]
 
   get '/auth/:provider/callback', to: 'sessions#create'

@@ -1,6 +1,6 @@
 # ¿Cómo Vamos?
 
-![Build Status](https://travis-ci.org/nhocki/como_vamos.svg)
+[![Build Status](https://travis-ci.org/nhocki/como_vamos.svg?branch=master)](https://travis-ci.org/nhocki/como_vamos)
 
 ¿Cómo Vamos? is an application to share solutions for competitive programming problems.
 
@@ -15,7 +15,12 @@ application, make sure you have the following env variables:
 * `GITHUB_KEY`: GitHub's application key.
 * `GITHUB_SECRET`: GitHub's application secret.
 * `SECRET_KEY_BASE`: A very long, random script for cookies. Generate one with `rake secret`.
+* `AWS_ACCESS`: The AWS access key.
+* `AWS_SECRET`: The AWS secret key.
+* `AWS_BUCKET`: The AWS bucket to store the solutions.
 * `DATABASE_URL`: The URL of the production database. E.g `postgres://myuser:mypass@localhost/somedatabase`
+
+All these keys are referenced in the `config/secrets.yml` file.
 
 ---
 

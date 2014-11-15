@@ -1,22 +1,5 @@
 <section class='problems'>
   <% 5.times do %>
-    <div class='problem'>
-      <h5>
-        <%= link_to random_problem, problem_path('foo') %>
-        <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
-      </h5>
-
-      <% if random_judge %>
-        <div class='judge'><%= link_to random_judge.name, random_judge %></div>
-      <% end %>
-
-      <div class='categories'>
-        <% random_category(3).each do |category| %>
-          <span class='category success'>
-            <%= link_to category.name, problem_path('foo') %>
-          </span>
-        <% end %>
-      </div>
-    </div>
+    <%= render random_problem if random_problem %>
   <% end %>
 </section>
