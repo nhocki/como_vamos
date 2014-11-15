@@ -2,6 +2,8 @@ class Solution < ActiveRecord::Base
   belongs_to :user
   belongs_to :problem
 
+  mount_uploader :source_code, SolutionUploader
+
   validates :user, :problem, :explanation, :source_code, presence: true
 
   def highlight_lang
