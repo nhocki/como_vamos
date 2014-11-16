@@ -6,4 +6,6 @@ class Judge < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true
   validates :url, presence: true
+
+  delegate :count, to: :problems, prefix: true
 end

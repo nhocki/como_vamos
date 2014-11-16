@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Problem, :type => :model do
   it { expect belong_to(:judge) }
   it { expect belong_to(:creator) }
+  it { expect have_many(:solutions) }
   it { expect have_many(:categories) }
   it { expect have_many(:categorizations) }
 

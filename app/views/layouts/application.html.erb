@@ -6,14 +6,14 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='<%= body_class %>'>
   <%= render 'header' %>
 
   <section id='content' class='wrapper'>
     <%= render 'alerts' %>
-    <%= content_or_partial :sidebar %>
+    <%= content_or_partial :sidebar unless full_layout? %>
 
-    <div class="with-sidebar">
+    <div class="<%= content_class %>">
       <%= yield %>
     </div>
   </section>

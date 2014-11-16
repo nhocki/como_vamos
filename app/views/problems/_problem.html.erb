@@ -1,7 +1,9 @@
 <%= div_for problem do %>
   <h5>
     <%= link_to problem.name, problem %>
-    <span class='small'>(<%= pluralize rand(10), "solution" %>)</span>
+    <span class='small'>
+      (<%= pluralize problem.solutions_count, t("problems.show.solution") %>)
+    </span>
   </h5>
 
   <div class='judge'>

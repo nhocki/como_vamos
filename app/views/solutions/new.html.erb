@@ -1,0 +1,11 @@
+<h1 class='title'><%= t('.title') %></h1>
+
+<div class='subtitle'>
+  <%= t('.subtitle', problem: link_to(@problem.name, @problem), judge: link_to(@problem.judge_name, @problem.judge)).html_safe %>
+</div>
+
+<%= simple_form_for [@solution.problem, @solution] do |f| %>
+  <%= f.input :explanation, as: :text, input_html: { rows: 10 }, placeholder: t('markdown_enabled'), hint: t('.explanation_hint') %>
+  <%= f.input :source_code, as: :file %>
+  <%= f.button :submit %>
+<% end %>

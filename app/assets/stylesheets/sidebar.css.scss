@@ -11,6 +11,10 @@
     a {
       display: block;
       @include link(darken($base-font-color, 70), $link-color);
+      &.active{
+        color: $link-color;
+        font-weight: bold;
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
 <div class='solution'>
   <header>
-    <%= avatar_for(random_user, size: 64) %>
+    <%= avatar_for(solution.user, size: 64) %>
 
     <div class='info'>
       <div class='solver'>
-        Submitted by <%= link_to 'Nicolás Hock Isaza', '#' %> on May 13, 1989.
+        Submitted by <%= link_to solution.user_name, solution.user %> on
+        <%= formatted_date(solution.created_at) %>.
       </div>
 
       <div class='actions'>
@@ -14,16 +15,8 @@
     </div>
   </header>
 
-
   <div class='source'>
-    <div class='explanation'>
-      <p>DP solution:</p>
-
-      <p>
-        <pre class='inline'>dp[i][j]</pre> is how many space I'm wasting using the first i songs.
-      </p>
-    </div>
-
-    <pre class='source-code'><code data-language='c'><%= sample_source_code %></code></pre>
+    <div class='explanation'><%= markdown(solution.explanation) %></div>
+    <pre class='source-code'><%= solution_source(solution) %></pre>
   </div>
 </div>

@@ -1,16 +1,18 @@
 <h1 class='title'>
   <%= @problem.name %>
-  <span class='x-small'>&nbsp; (<%= pluralize(rand(10), 'solution') %>)</span>
+  <span class='x-small'>&nbsp; (<%= pluralize(@problem.solutions_count, t('.solution')) %>)</span>
 </h1>
 
 <div class='subtitle'>
+  <%= link_to new_problem_solution_path(@problem) do %>
+    <%= icon 'plus', t('.add_solution') %>
+  <% end %>
+
   <%= link_to @problem.url, target: '_blank' do %>
     <%= icon 'globe', t('.website') %>
   <% end %>
 </div>
 
 <div class='solutions'>
-  <% 5.times do %>
-    <%= render 'solutions/solution' %>
-  <% end %>
+  <%= render @problem.solutions %>
 </div>

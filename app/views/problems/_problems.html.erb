@@ -1,0 +1,7 @@
+<section class='problems'>
+  <% if problems.any? %>
+    <%= render problems %>
+  <% else %>
+    There are no problems here yet, you can <%= link_to "add one here", new_problem_path %>.
+  <% end %>
+</section>

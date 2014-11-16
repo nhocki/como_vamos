@@ -2,6 +2,7 @@ class ProblemsController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
+    @problems = Problem.all
   end
 
   def show

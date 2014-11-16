@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
   validates :username, :email, presence: true, uniqueness: true
   validates :provider_uid, presence: true, uniqueness: { scope: :provider }
 
-  # Problems the user has created, not solved!
-  has_many :problems, foreign_key: :creator_id
+  has_many :solutions
+  has_many :solved_problems, through: :solutions, class_name: 'Problem', source: :problem
+  has_many :problems, foreign_key: :creator_id # Problems the user has created, not solved!
+
 
   def self.from_omniauth(auth)
     info = auth['info']
