@@ -34,7 +34,13 @@ class ApplicationController < ActionController::Base
 
   def require_login!
     if !logged_in? || params[:force]
+      session[:return_to] = request.original_fullpath
       redirect_to root_url, alert: I18n.t("application.login_required") and return
     end
+  end
+
+  def redirect_back_or_to(url = root_url, options = {})
+    redirect_url = session.delete(:return_to) || url
+    redirect_to redirect_url, options
   end
 end
