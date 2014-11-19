@@ -2,5 +2,5 @@
 
 <p class='subtitle'>These are the problems <%= @user.name %> has solved.</p>
 
-<%= render 'welcome/problems' %>
+<%= render 'problems/problems', problems: @user.solved_problems %>
 
