@@ -13,7 +13,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Comovamos
+module ComoVamos
   class Application < Rails::Application
 
     if defined?(Dotenv)
