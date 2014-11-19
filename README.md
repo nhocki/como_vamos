@@ -8,6 +8,17 @@
 It was born out of necessity to keep track of solved problems among team members and to
 share solutions with other teams.
 
+## Contributing
+
+If you find something's missing or could be better, feel free to open an
+[issue](https://github.com/nhocki/como_vamos/issues/new) or create a Pull Request
+(I'd really appreciate this).
+
+If you're gonna open a Pull Request, please install [EditorConfig](http://editorconfig.org/),
+it will keep most of the code styling consistent and will.
+
+Feel free to contact me for any feedback, I'll happily respond.
+
 ## Deploying
 
 All important secret keys are read from the environment. If you're deploying this
