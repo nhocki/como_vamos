@@ -80,6 +80,9 @@ en:
       title: "New Solution"
       subtitle: "You are adding a solution for %{problem} from %{judge}."
       explanation_hint: "Explain how you solved the problem and any key aspects about your solution."
+    create:
+      success: "Your solution was created! Nice job!"
+      error: "Sadly we couldn't create your solution. Fix the problems and try again."
   sessions:
     create:
       success: "You've been logged in!"
