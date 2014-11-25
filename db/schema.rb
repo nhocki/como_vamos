@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115060459) do
+ActiveRecord::Schema.define(version: 20141125053348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20141115060459) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "problems_count", default: 0, null: false
   end
 
+  add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
 
   create_table "categorizations", force: true do |t|
@@ -49,15 +51,19 @@ ActiveRecord::Schema.define(version: 20141115060459) do
 
   create_table "problems", force: true do |t|
     t.integer  "judge_id"
-    t.string   "number",     null: false
-    t.string   "title",      null: false
-    t.string   "url",        null: false
+    t.string   "number",                       null: false
+    t.string   "title",                        null: false
+    t.string   "url",                          null: false
     t.string   "slug"
     t.integer  "creator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "categories_count", default: 0, null: false
+    t.integer  "solutions_count",  default: 0, null: false
   end
 
+  add_index "problems", ["created_at"], name: "index_problems_on_created_at", using: :btree
+  add_index "problems", ["judge_id", "number"], name: "index_problems_on_judge_id_and_number", unique: true, using: :btree
   add_index "problems", ["judge_id"], name: "index_problems_on_judge_id", using: :btree
   add_index "problems", ["slug"], name: "index_problems_on_slug", unique: true, using: :btree
 
@@ -70,6 +76,7 @@ ActiveRecord::Schema.define(version: 20141115060459) do
     t.datetime "updated_at"
   end
 
+  add_index "solutions", ["created_at"], name: "index_solutions_on_created_at", using: :btree
   add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
   add_index "solutions", ["user_id"], name: "index_solutions_on_user_id", using: :btree
 
@@ -82,6 +89,7 @@ ActiveRecord::Schema.define(version: 20141115060459) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "solutions_count", default: 0, null: false
   end
 
   add_index "users", ["provider", "provider_uid"], name: "index_users_on_provider_and_provider_uid", unique: true, using: :btree

@@ -1,6 +1,6 @@
 class Solution < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :problem
+  belongs_to :user,    counter_cache: true
+  belongs_to :problem, counter_cache: true
 
   mount_uploader :source_code, SolutionUploader
 
@@ -24,7 +24,7 @@ class Solution < ActiveRecord::Base
 
   def get_content_from_s3
     # Download the source code from S3
-    Rails.cache.fetch("#{cache_key}/source_content") do
+    Rails.cache.fetch("#{cache_key}/source_content".freeze) do
       HTTParty.get(source_code_url).body
     end
   end

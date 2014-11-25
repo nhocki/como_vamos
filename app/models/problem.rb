@@ -2,7 +2,7 @@ class Problem < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  belongs_to :judge
+  belongs_to :judge, counter_cache: true
   belongs_to :creator, class_name: "User"
 
   has_many :categorizations
@@ -14,7 +14,6 @@ class Problem < ActiveRecord::Base
   validates :number, presence: true, uniqueness: { scope: :judge_id }
 
   delegate :name, to: :judge, prefix: true
-  delegate :count, to: :solutions, prefix: true
 
   def name
     "#{number} - #{title}"
