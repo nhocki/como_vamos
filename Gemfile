@@ -15,6 +15,7 @@ gem "fog", "~> 1.24.0"
 gem "httparty", "~> 0.13.3"
 gem "party_foul", "~> 1.5.5"
 gem "airbrake", "~> 4.1.0"
+gem "kaminari", "~> 0.16.1"
 
 # Fix font assets with the CDN.
 gem "font_assets", "~> 0.1.11"
