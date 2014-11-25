@@ -85,6 +85,9 @@ en:
     create:
       success: "Your solution was created! Nice job!"
       error: "Sadly we couldn't create your solution. Fix the problems and try again."
+    solution:
+      edit: "Edit"
+      show: "Show solution"
   sessions:
     create:
       success: "You've been logged in!"
