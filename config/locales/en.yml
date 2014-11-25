@@ -22,6 +22,7 @@
 en:
   markdown_enabled: "You can use Markdown here."
   problem: "Problem"
+  solution: "Solution"
   url: "URL"
   activerecord:
     attributes:
@@ -47,6 +48,10 @@ en:
     update:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."
+  users:
+    user:
+      avatar_alt: "%{name} profile"
+      solutions_and_problems_count: "%{solutions_count} for %{problems_count}."
   problems:
     create:
       success: "The problem was created! Now add some solutions!"

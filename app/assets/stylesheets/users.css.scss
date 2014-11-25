@@ -5,9 +5,13 @@
 .user{
   @include span-columns(3 of 6);
   @include outer-container;
-  padding-bottom: 2em;
-  border-bottom: 1px solid $light-gray;
-  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: .0625em solid $light-gray;
+  margin-bottom: 1em;
+
+  &:nth-child(odd){
+    margin-right: 2em;
+  }
 
   a{
     display: block;
