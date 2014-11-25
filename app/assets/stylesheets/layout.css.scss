@@ -51,6 +51,10 @@ body{
   display: inline;
 }
 
+.chosen-container{
+  min-width: 15em;
+}
+
 @import "header";
 @import "footer";
 @import "sidebar";
