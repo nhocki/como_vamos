@@ -2,7 +2,7 @@ class ProblemsController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
-    @problems = Problem.order(:created_at)
+    @problems = Problem.order('updated_at DESC')
   end
 
   def show

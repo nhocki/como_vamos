@@ -16,7 +16,6 @@
   }
 }
 
-
 .solutions{
   .solution{
     @extend %list-border;
@@ -25,6 +24,9 @@
       @include outer-container;
       .avatar{
         float: left;
+        min-width: 4em;
+        min-height: 4em;
+        line-height: 1em;
       }
 
       .info{
