@@ -1,5 +1,5 @@
 <h1 class='title'><%= t('.title') %></h1>
-<% if current_user %>
+<% if logged_in? %>
   <div class='subtitle'><%= link_to t('.add_judge'), new_judge_path %></div>
 <% end %>
 

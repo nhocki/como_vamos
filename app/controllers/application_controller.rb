@@ -19,11 +19,17 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= begin
+      if session[:user_id]
+        User.find(session[:user_id])
+      else
+        User.new
+      end
+    end
   end
 
   helper_method def logged_in?
-    !!current_user
+    current_user.persisted?
   end
 
   def require_not_logged_in!
