@@ -29,4 +29,10 @@ feature 'Solutions' do
     expect(current_path).to eql(problem_path(problem))
     expect(page).to have_content('The new description')
   end
+
+  scenario 'there is no edit link for solutions I cannot edit' do
+    create(:solution, problem: problem)
+    visit problem_path(problem)
+    expect(page).not_to have_content(I18n.t('solutions.solution.edit'))
+  end
 end

@@ -1,3 +1,4 @@
+<% policy = SolutionPolicy.new(current_user, solution) %>
 <div class='solution'>
   <header>
     <%= avatar_for(solution.user, size: 64) %>
@@ -10,11 +11,13 @@
 
       <div class='actions'>
         <span class='action show'><%= icon 'eye', t('.show') %></span>
-        <span class='action'>
-          <%= link_to edit_problem_solution_url(solution.problem, solution) do %>
-            <%= icon 'edit', t('.edit') %>
-          <% end %>
-        </span>
+        <% if policy.update? %>
+          <span class='action'>
+            <%= link_to edit_problem_solution_url(solution.problem, solution) do %>
+              <%= icon 'edit', t('.edit') %>
+            <% end %>
+          </span>
+        <% end %>
       </div>
     </div>
   </header>
