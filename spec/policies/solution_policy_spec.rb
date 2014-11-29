@@ -7,12 +7,12 @@ describe SolutionPolicy do
     let(:policy) { SolutionPolicy.new(user, solution) }
 
     it "is true when the user owns the policy" do
-      expect(policy.update?).to be_true
+      expect(policy.update?).to be_truthy
     end
 
     it "is false when the solution is for another user" do
       policy = SolutionPolicy.new(create(:user), solution)
-      expect(policy.update?).to be_false
+      expect(policy.update?).to be_falsy
     end
   end
 end
