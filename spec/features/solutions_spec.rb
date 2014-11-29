@@ -18,4 +18,21 @@ feature 'Solutions' do
     expect(current_path).to eql(problem_path(problem))
     expect(page).to have_content(I18n.t('problems.show.solution').pluralize(1))
   end
+
+  scenario 'editing an existing solution' do
+    create_solution(problem)
+    visit problem_path(problem)
+    click_link I18n.t('solutions.solution.edit')
+
+    fill_in 'solution_explanation', with: 'The new description'
+    click_button I18n.t('helpers.submit.update', model: Solution)
+    expect(current_path).to eql(problem_path(problem))
+    expect(page).to have_content('The new description')
+  end
+
+  scenario 'there is no edit link for solutions I cannot edit' do
+    create(:solution, problem: problem)
+    visit problem_path(problem)
+    expect(page).not_to have_content(I18n.t('solutions.solution.edit'))
+  end
 end

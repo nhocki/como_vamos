@@ -15,6 +15,19 @@ class SolutionsController < ApplicationController
     end
   end
 
+  def edit
+    @solution = current_user.solutions.where(problem: problem).find(params[:id])
+  end
+
+  def update
+    @solution = current_user.solutions.where(problem: problem).find(params[:id])
+    if @solution.update(solution_params)
+      redirect_to problem, notice: I18n.t('solutions.update.success')
+    else
+      flash.now[:alert] = I18n.t("solutions.update.error")
+    end
+  end
+
   private
 
   def problem

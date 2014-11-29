@@ -1,11 +1,10 @@
 <%= div_for user do %>
-  <%= link_to user, alt: "#{user.name} profile" do %>
-    <div class='avatar'><%= image_tag user.avatar %></div>
+  <%= link_to user, title: t('.avatar_alt', name: user.name) do %>
+    <div class='avatar'><%= image_tag user.avatar, alt: t('.avatar_alt', name: user.name) %></div>
     <div class='info'>
       <h5><%= user.name %></h5>
 
-      <%= pluralize(rand(100), 'solution') %> for
-      <%= pluralize(rand(100), 'problems') %>.
+      <%= solutions_and_problems_count_for(user) %>
     </div>
   <% end %>
 <% end %>

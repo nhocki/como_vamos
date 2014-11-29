@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :categories,  only: [ :show ]
 
   resources :problems, only: [ :index, :show, :new, :create ] do
-    resources :solutions, only: [ :new, :create ]
+    resources :solutions, only: [ :new, :create, :edit, :update ]
   end
 
   get '/auth/:provider/callback', to: 'sessions#create'

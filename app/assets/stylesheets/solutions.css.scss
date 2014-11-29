@@ -37,7 +37,12 @@
       .actions{
         margin-top: 1.2em;
         font-size: 0.9em;
-        .action{ @extend %action-list; }
+        .action{
+          @extend %action-list;
+          a, & {
+            @include link($base-font-color, darken($link-color, 25));
+          }
+        }
       }
     }
 

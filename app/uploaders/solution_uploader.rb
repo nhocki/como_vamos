@@ -14,12 +14,16 @@ class SolutionUploader < CarrierWave::Uploader::Base
     java: 'java',
   }.freeze
 
+  def self.allowed_extensions
+    EXTENSION_TO_LANG.keys.map(&:to_s)
+  end
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   def extension_white_list
-    @extension ||= EXTENSION_TO_LANG.keys.map(&:to_s)
+    @extension ||= self.class.allowed_extensions
   end
 
   def stored_on_s3?
