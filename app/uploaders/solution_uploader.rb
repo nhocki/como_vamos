@@ -27,6 +27,6 @@ class SolutionUploader < CarrierWave::Uploader::Base
   end
 
   def stored_on_s3?
-    storage == :fog
+    storage.is_a?(CarrierWave::Storage::Fog)
   end
 end
