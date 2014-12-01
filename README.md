@@ -34,6 +34,8 @@ application, make sure you have the following env variables:
 * `MEMCACHED_SERVERS`:  The memcached server list (comma separated list).
 * `MEMCACHED_USERNAME`: The memcached username.
 * `MEMCACHED_PASSWORD`: The memcached password.
+* `GAUGES_ID`: [Gaug.es](http://gaug.es/) tracking id.
+* `GOOGLE_ANALYTICS_ID`: [Google Analytics](https://www.google.com/analytics) tracking id.
 
 Most of these keys are referenced in the `config/secrets.yml` file.
 
