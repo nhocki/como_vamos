@@ -21,7 +21,7 @@
 
   ga('create', '<%= Rails.application.secrets.google_analytics_id %>', 'auto');
   <% if logged_in? %>
-    ga('set', '&uid', '<%= current_user.id %>');
+  ga('set', '&uid', '<%= current_user.id %>');
   <% end %>
   ga('send', 'pageview');
 <% end %>
