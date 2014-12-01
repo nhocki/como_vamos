@@ -31,8 +31,11 @@ application, make sure you have the following env variables:
 * `AWS_SECRET`: The AWS secret key.
 * `AWS_BUCKET`: The AWS bucket to store the solutions.
 * `DATABASE_URL`: The URL of the production database. E.g `postgres://myuser:mypass@localhost/somedatabase`
+* `MEMCACHED_SERVERS`:  The memcached server list (comma separated list).
+* `MEMCACHED_USERNAME`: The memcached username.
+* `MEMCACHED_PASSWORD`: The memcached password.
 
-All these keys are referenced in the `config/secrets.yml` file.
+Most of these keys are referenced in the `config/secrets.yml` file.
 
 ---
 

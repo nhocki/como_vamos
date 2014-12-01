@@ -38,4 +38,7 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
-gem "rails_12factor", "~> 0.0.3", group: :production
+group :production do
+  gem "rails_12factor", "~> 0.0.3"
+  gem "dalli", "~> 2.7.2"
+end
