@@ -18,4 +18,8 @@ class Problem < ActiveRecord::Base
   def name
     "#{number} - #{title}"
   end
+
+  def to_s
+    title
+  end
 end

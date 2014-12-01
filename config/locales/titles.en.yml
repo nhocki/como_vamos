@@ -1,0 +1,25 @@
+en:
+  title:
+    default: "¿Cómo Vamos? — Share programming challenges problems & solutions."
+    suffix: " — ¿Cómo Vamos?"
+    categories:
+      show: "%{category} Problems"
+    judges:
+      index: "All Judges"
+      show: "%{judge} Problems"
+      new: "New Judge"
+    problems:
+      index: "All Problems"
+      new: "New Problem"
+      show: "%{problem} Solutions"
+    profiles:
+      show: "Edit Your Profile"
+    solutions:
+      new: "New Solution for %{problem}"
+      edit: "Editing Solution"
+    users:
+      index: "All Users"
+      show: "%{user} Profile"
+    welcome:
+      index: "%{title}"
+      logged_in: "Dashboard"

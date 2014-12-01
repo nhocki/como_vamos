@@ -8,6 +8,10 @@ class Solution < ActiveRecord::Base
 
   delegate :name, to: :user, prefix: true
 
+  def to_s
+    name
+  end
+
   def highlight_lang
     SolutionUploader::EXTENSION_TO_LANG[file_extension]
   end

@@ -8,4 +8,8 @@ class Category < ActiveRecord::Base
   has_many :problems, through: :categorizations
 
   validates :name, presence: true, uniqueness: true
+
+  def to_s
+    name
+  end
 end

@@ -10,4 +10,8 @@ class Judge < ActiveRecord::Base
   validates :url, presence: true
 
   delegate :count, to: :problems, prefix: true
+
+  def to_s
+    name
+  end
 end
