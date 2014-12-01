@@ -37,3 +37,5 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
 end
+
+gem "rails_12factor", "~> 0.0.3", group: :production
