@@ -1,6 +1,6 @@
 module LayoutHelper
   def body_class
-    "#{params[:controller]}_controller #{params[:action]}_action"
+    "#{controller_name}_controller #{action_name}_action"
   end
 
   def content_class
