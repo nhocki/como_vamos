@@ -59,6 +59,8 @@ en:
     index:
       title: "All Problems"
       add: "Add a new problem"
+      guest_add: "You can add new problems once you %{login}."
+      login_text: "are logged in"
     show:
       website: "Go to problem statement"
       add_solution: "Add Solution"
@@ -78,6 +80,8 @@ en:
     index:
       title: "Judges"
       add_judge: "Add Judge"
+      guest_add_judge: "You can add a judge once you %{login}."
+      login_text: "are logged in"
     new:
       title: "New Judge"
   solutions:
