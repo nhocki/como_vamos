@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   friendly_id :username, use: :slugged
 
   validates :name, :provider, presence: true
-  validates :username, :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
+  validates :email, uniqueness: true
   validates :provider_uid, presence: true, uniqueness: { scope: :provider }
 
   has_many :solutions
@@ -24,7 +25,7 @@ class User < ActiveRecord::Base
   end
 
   def avatar(size: 96)
-    gravatar_id = Digest::MD5.hexdigest(email.downcase)
+    gravatar_id = Digest::MD5.hexdigest(email.try(:downcase) || 'foo')
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
