@@ -13,6 +13,7 @@ gem "omniauth-github", "~> 1.1.2"
 gem "carrierwave", "~> 0.10.0"
 gem "fog", "~> 1.24.0"
 gem "httparty", "~> 0.13.3"
+gem "party_foul", "~> 1.5.5"
 
 # Styling. Thanks Thoughtbot!
 gem "bitters", "~> 0.10.1"
