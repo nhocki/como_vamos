@@ -28,6 +28,10 @@ gem "font-awesome-sass", "~> 4.2.2"
 gem "simple_form", "~> 3.0.2"
 gem "chosen-rails", "~> 1.2.0"
 
+# Unicorn as server
+gem "unicorn", "~> 4.8.3"
+gem "unicorn-worker-killer", "~> 0.4.2"
+
 group :development do
   gem 'spring', '~> 1.1.3'
   gem "quiet_assets", "~> 1.0.3"
