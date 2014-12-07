@@ -42,6 +42,10 @@
           a, & {
             @include link($base-font-color, darken($link-color, 25));
           }
+          &.disabled, &.disabled:hover{
+            color: lighten($gray, 10);
+            cursor: default;
+          }
         }
       }
     }

@@ -13,11 +13,15 @@
         <span class='action show'><%= icon 'eye', t('.show') %></span>
 
         <% if policy.download? %>
-        <span class='action'>
-          <%= link_to solution.source_code.url, rel: 'nofollow' do %>
-            <%= icon 'cloud-download', t('.download') %>
-          <% end %>
-        </span>
+          <span class='action'>
+            <%= link_to solution.source_code.url, rel: 'nofollow' do %>
+              <%= icon 'cloud-download', t('.download') %>
+            <% end %>
+          </span>
+          <% else %>
+          <span class='action disabled'>
+            <%= icon 'cloud-download', t('.login_to_download') %>
+          </span>
         <% end %>
 
         <% if policy.update? %>

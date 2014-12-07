@@ -13,6 +13,10 @@ body{
   @include outer-container;
 }
 
+.light {
+  color: $gray;
+}
+
 #content{
   padding-bottom: 2em + $footer-height;
   @include outer-container;
