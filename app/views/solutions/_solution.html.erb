@@ -11,6 +11,15 @@
 
       <div class='actions'>
         <span class='action show'><%= icon 'eye', t('.show') %></span>
+
+        <% if policy.download? %>
+        <span class='action'>
+          <%= link_to solution.source_code.url, rel: 'nofollow' do %>
+            <%= icon 'cloud-download', t('.download') %>
+          <% end %>
+        </span>
+        <% end %>
+
         <% if policy.update? %>
           <span class='action'>
             <%= link_to edit_problem_solution_url(solution.problem, solution) do %>

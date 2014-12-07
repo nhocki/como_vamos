@@ -97,6 +97,7 @@ en:
     solution:
       edit: "Edit"
       show: "Show solution"
+      download: "Download"
   sessions:
     create:
       success: "You've been logged in!"

@@ -9,6 +9,10 @@ class SolutionPolicy
     logged_in? && solution.user_id == user.id
   end
 
+  def download?
+    logged_in?
+  end
+
   private
 
   def logged_in?
