@@ -16,6 +16,10 @@ gem "httparty", "~> 0.13.3"
 gem "party_foul", "~> 1.5.5"
 gem "airbrake", "~> 4.1.0"
 
+# Markdown support.
+gem "redcarpet", "~> 3.2.1"
+gem "pygments.rb", "~> 0.6.0"
+
 # Styling. Thanks Thoughtbot!
 gem "bitters", "~> 0.10.1"
 gem "bourbon", "~> 3.2.3"

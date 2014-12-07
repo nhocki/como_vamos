@@ -18,11 +18,6 @@ module LayoutHelper
     date.strftime(format)
   end
 
-  # No op. for now.
-  def markdown(text)
-    simple_format(text)
-  end
-
   def solution_source(solution)
     content_tag :code, data: {language: solution.highlight_lang} do
       solution.source_code_content
