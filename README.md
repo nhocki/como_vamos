@@ -36,6 +36,8 @@ application, make sure you have the following env variables:
 * `MEMCACHED_PASSWORD`: The memcached password.
 * `GAUGES_ID`: [Gaug.es](http://gaug.es/) tracking id.
 * `GOOGLE_ANALYTICS_ID`: [Google Analytics](https://www.google.com/analytics) tracking id.
+* `PARTY_FOUL_TOKEN`: [Party Foul](https://github.com/dockyard/party_foul) token.
+* `AIRBRAKE_KEY`: [Airbrake](https://www.airbrake.io/) project id.
 
 Most of these keys are referenced in the `config/secrets.yml` file.
 
