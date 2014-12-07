@@ -16,6 +16,9 @@ gem "httparty", "~> 0.13.3"
 gem "party_foul", "~> 1.5.5"
 gem "airbrake", "~> 4.1.0"
 
+# Fix font assets with the CDN.
+gem "font_assets", "~> 0.1.11"
+
 # Markdown support.
 gem "redcarpet", "~> 3.2.1"
 gem "pygments.rb", "~> 0.6.0"

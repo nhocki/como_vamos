@@ -41,6 +41,13 @@ application, make sure you have the following env variables:
 
 Most of these keys are referenced in the `config/secrets.yml` file.
 
+### Using a CDN for assets
+
+If you use a CDN for assets, you'll need two extra environment variables:
+
+* `ASSETS_HOST`: The host for the CDN (E.g http://assets.comovamos.co)
+* `FONTS_ORIGIN_HOST`: The Origin host for the fonts to load. [More Info](https://github.com/ericallam/font_assets)
+
 ---
 
 [This is a rewrite. The original can be found here.](https://github.com/andmej/como_vamos)

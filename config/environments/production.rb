@@ -62,6 +62,7 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   if Rails.application.secrets.asset_host
     config.action_controller.asset_host = Rails.application.secrets.asset_host
+    config.font_assets.origin = Rails.application.secrets.font_asset_origin
   end
 
   # Ignore bad email addresses and do not raise email delivery errors.
