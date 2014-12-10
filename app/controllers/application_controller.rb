@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  helper_method def page
+    [params[:page].to_i, 1].max
+  end
+
   helper_method def full_layout?
     !!@full_layout
   end

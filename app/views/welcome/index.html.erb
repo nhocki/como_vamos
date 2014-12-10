@@ -4,4 +4,4 @@
   This is the list of problems you've solved.
 </p>
 
-<%= render 'problems/problems', problems: current_user.solved_problems %>
+<%= render 'problems/problems', problems: current_user.solved_problems.page(page) %>

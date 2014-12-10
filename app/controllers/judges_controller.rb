@@ -2,7 +2,7 @@ class JudgesController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
-    @judges = Judge.all
+    @judges = Judge.page(page)
   end
 
   def show
