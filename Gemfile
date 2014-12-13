@@ -56,3 +56,4 @@ group :production do
   gem "rails_12factor", "~> 0.0.3"
   gem "dalli", "~> 2.7.2"
 end
+gem "skylight", "~> 0.5.1"

@@ -41,6 +41,11 @@ application, make sure you have the following env variables:
 
 Most of these keys are referenced in the `config/secrets.yml` file.
 
+### Skylight Integration:
+
+* `SKYLIGHT_AUTHENTICATION`: The Skylight authentication token
+* `SKYLIGHT_APPLICATION`: The Skylight application id.
+
 ### Using a CDN for assets
 
 If you use a CDN for assets, you'll need two extra environment variables:
