@@ -27,6 +27,6 @@ class ProblemsController < ApplicationController
   private
 
   def problem_params
-    params.require(:problem).permit(:judge_id, :url, :title, :number, { category_ids: [ ]})
+    params.require(:problem).permit(:difficulty_level, :judge_id, :url, :title, :number, { category_ids: [ ]})
   end
 end

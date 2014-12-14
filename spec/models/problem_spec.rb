@@ -20,4 +20,9 @@ RSpec.describe Problem, :type => :model do
     problem = build(:problem, number: '100', title: '3n + 1')
     expect(problem.name).to eql('100 - 3n + 1')
   end
+
+  it "#difficulty gives a human name of the #difficulty_level" do
+    problem = build(:problem, difficulty_level: 1)
+    expect(problem.difficulty).to eql(I18n.t('problems.difficulties.moderate'))
+  end
 end
