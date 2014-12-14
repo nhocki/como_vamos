@@ -2,7 +2,8 @@ class ProblemsController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
-    @problems = Problem.order('updated_at DESC').includes(:judge,:categories).page(page)
+    @problems = Problem.order('updated_at DESC').page(page)
+    @problems = @problems.where(difficulty_level: params[:level]) if params[:level]
   end
 
   def show
