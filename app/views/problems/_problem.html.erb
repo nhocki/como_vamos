@@ -6,8 +6,10 @@
     </span>
   </h5>
 
-  <div class='judge'>
-    <%= link_to problem.judge_name, problem.judge %>
+  <div>
+    <div class='meta'><strong>Judge:</strong> <%= link_to problem.judge_name, problem.judge %></div>
+    <div class='meta'><strong>Solutions:</strong> <%= problem.solutions_count%></div>
+    <div class='meta'><strong>Difficulty:</strong> <%= problem.difficulty %></div>
   </div>
 
   <div class='categories'>
