@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   validates :provider, presence: true
   validates :username, presence: true, uniqueness: true
-  validates :email, uniqueness: {allow_nil: true}
+  validates :email, uniqueness: { allow_nil: true, allow_blank: true }
   validates :provider_uid, presence: true, uniqueness: { scope: :provider }
 
   has_many :solutions
@@ -20,12 +20,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def profile_ready?
+    email.present? && name.present?
+  end
+
   def to_s
-    name
+    name.presence || username
   end
 
   def avatar(size: 96)
-    gravatar_id = Digest::MD5.hexdigest(email.try(:downcase) || 'foo')
+    gravatar_id = Digest::MD5.hexdigest(email.try(:downcase) || 'hello@comovamos.co')
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 

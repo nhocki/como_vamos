@@ -1,5 +1,9 @@
 <h1 class='title'><%= t('.your_profile') %></h1>
 
+<% unless current_user.profile_ready? %>
+  <div class='info'><%= t('.complete_profile_info') %></div>
+<% end %>
+
 <%= simple_form_for @user, as: :profile, url: profile_path, method: :patch do |f| %>
   <%= f.input :name, placeholder: "Mr. Smith" %>
   <%= f.input :username, placeholder: "mr_smith" %>

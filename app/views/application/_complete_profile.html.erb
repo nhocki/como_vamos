@@ -1,0 +1,11 @@
+<% unless current_page?(profile_path) %>
+    <% if current_user.persisted? && !current_user.profile_ready?%>
+      <div class='info alert notice'>
+        <%= t('.complete_profile', profile_link: link_to(t('.here'), profile_path)).html_safe %>
+      </div>
+    <% elsif !current_user.persisted? %>
+      <div class='info alert notice'>
+        <%= t('.create_account') %>
+      </div>
+    <% end %>
+<% end %>

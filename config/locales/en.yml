@@ -30,6 +30,10 @@ en:
         url: "URL"
   application:
     login_required: "You must login first."
+    complete_profile:
+      complete_profile: "Please complete your profile. You can do it %{profile_link}."
+      here: "here"
+      create_account: "You should create an account..."
     sidebar:
       categories: "Categories"
     header:
@@ -45,6 +49,7 @@ en:
     show:
       your_profile: "Your Profile"
       update_btn: "Update Profile"
+      complete_profile_info: "A complete profile has a name and email."
     update:
       success: "Your profile was updated!"
       error: "We couldn't update your profile."

@@ -1,17 +1,25 @@
-.alerts{
-  .alert{
-    border-radius: 0.3em;
-    padding: 0.7em;
-    margin: 0.5em 0 2em;
+.alert{
+  border-radius: 0.3em;
+  padding: 0.7em;
+  margin: 0.5em 0 2em;
 
-    &.success{
-      background: $success-color;
-      color: darken($success-color, 60);
-    }
+  &.success{
+    background: $success-color;
+    color: darken($success-color, 60);
+  }
 
-    &.error{
-      background: $error-color;
-      color: darken($error-color, 60);
+  &.error{
+    background: $error-color;
+    color: darken($error-color, 60);
+  }
+
+  &.notice{
+    background: $notice-color;
+    color: darken($notice-color, 60);
+    a, a:hover {
+      color: darken($notice-color, 80);
+      text-decoration: underline;
+      font-weight: bold;
     }
   }
 }

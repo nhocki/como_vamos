@@ -59,7 +59,12 @@ body{
   min-width: 15em;
 }
 
+
 @import "header";
 @import "footer";
 @import "sidebar";
 @import "alerts";
+
+#complete-profile{
+  @extend .alert.notice;
+}
