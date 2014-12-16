@@ -56,3 +56,4 @@ group :production do
   gem "dalli", "~> 2.7.2"
 end
 gem "skylight", "~> 0.5.1"
+gem "mixpanel-ruby", "~> 1.6.0"
