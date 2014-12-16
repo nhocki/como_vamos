@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   validates :provider, presence: true
   validates :username, presence: true, uniqueness: true
-  validates :email, uniqueness: true
+  validates :email, uniqueness: {allow_nil: true}
   validates :provider_uid, presence: true, uniqueness: { scope: :provider }
 
   has_many :solutions
