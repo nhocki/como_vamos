@@ -6,7 +6,7 @@ RSpec.describe User, :type => :model do
 
   describe "validations" do
     it { expect validate_uniqueness_of([ :username, :email, :provider_uid ]) }
-    it { expect validate_presence_of([ :username, :name, :provider, :provider_uid ]) }
+    it { expect validate_presence_of([ :username, :provider, :provider_uid ]) }
   end
 
   it "changes the slug when the username changes" do

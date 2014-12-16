@@ -102,5 +102,6 @@ en:
   sessions:
     create:
       success: "You've been logged in!"
+      error: "I'm really sorry but for some reason I could not log you in. Please write me an email at nhocki@gmail.com and I'll look into it. You can also create an issue <a href='https://github.com/nhocki/como_vamos/issues' target='_blank'>here</a>."
     destroy:
       success: "Hope to see you back soon!"
