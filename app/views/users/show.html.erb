@@ -1,6 +1,6 @@
-<h1 class='title'><%= @user.name %></h1>
+<h1 class='title'><%= @user.display_name %></h1>
 
-<p class='subtitle'>These are the problems <%= @user.name %> has solved.</p>
+<p class='subtitle'>These are the problems <%= @user.display_name %> has solved.</p>
 
 <%= render 'problems/problems', problems: @user.solved_problems.page(page) %>
 

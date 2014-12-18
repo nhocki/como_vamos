@@ -20,12 +20,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def display_name
+    name.presence || username
+  end
+
   def profile_ready?
     email.present? && name.present?
   end
 
   def to_s
-    name.presence || username
+    display_name
   end
 
   def avatar(size: 96)

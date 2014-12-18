@@ -15,6 +15,20 @@ RSpec.describe User, :type => :model do
     expect { user.save }.to change(user, :slug).from("foo").to("bar")
   end
 
+  describe "#display_name" do
+    it "shows the name if present" do
+      user = build(:user, name: "Foo")
+      expect(user.display_name).to eql("Foo")
+    end
+
+    it "shows the username if the name is blank or nil" do
+      user = build(:user, name: nil)
+      expect(user.display_name).to eql(user.username)
+      user.name = "     "
+      expect(user.display_name).to eql(user.username)
+    end
+  end
+
   describe ".from_omniauth" do
     let(:omniauth_hash) do
       {

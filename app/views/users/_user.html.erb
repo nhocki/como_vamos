@@ -1,8 +1,8 @@
 <%= div_for user do %>
-  <%= link_to user, title: t('.avatar_alt', name: user.name) do %>
-    <div class='avatar'><%= image_tag user.avatar, alt: t('.avatar_alt', name: user.name) %></div>
+  <%= link_to user, title: t('.avatar_alt', name: user.display_name) do %>
+    <div class='avatar'><%= image_tag user.avatar, alt: t('.avatar_alt', name: user.display_name) %></div>
     <div class='info'>
-      <h5><%= user.name %></h5>
+      <h5><%= user.display_name %></h5>
 
       <%= solutions_and_problems_count_for(user) %>
     </div>

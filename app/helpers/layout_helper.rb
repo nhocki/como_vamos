@@ -25,7 +25,7 @@ module LayoutHelper
   end
 
   def avatar_for(user, size: 96)
-    image = image_tag(user.avatar(size: size), alt: user.name)
+    image = image_tag(user.avatar(size: size), alt: user.display_name)
     content_tag :div, image, class: 'avatar'
   end
 
