@@ -3,7 +3,7 @@
     <%= render problems %>
 
     <%= paginate problems %>
-  <% else %>
-    There are no problems here yet, you can <%= link_to "add one here", new_problem_path %>.
+  <% else%>
+  	<%= without_problems %>
   <% end %>
 </section>
