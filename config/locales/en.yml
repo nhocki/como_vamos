@@ -58,6 +58,9 @@ en:
       avatar_alt: "%{name} profile"
       solutions_and_problems_count: "%{solutions_count} for %{problems_count}."
   problems:
+    problems:
+      add_link: "add one here"
+      no_problems: "There are no problems here yet, you can %{add_link}."
     create:
       success: "The problem was created! Now add some solutions!"
       error: "There were some problems, fix them before continuing."
