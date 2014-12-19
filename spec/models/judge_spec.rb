@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Judge, :type => :model do
+
+  it 'has a valid factory' do
+    expect(create(:judge)).to be_valid
+  end
+
   it { expect have_many(:problems) }
 
   describe "validations" do
