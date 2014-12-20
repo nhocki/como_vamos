@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.1.5"
 
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.0'
 gem 'pg', '~> 0.17.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -15,6 +15,9 @@ gem "fog", "~> 1.24.0"
 gem "httparty", "~> 0.13.3"
 gem "airbrake", "~> 4.1.0"
 gem "kaminari", "~> 0.16.1"
+
+gem "skylight", "~> 0.5.1"
+gem "mixpanel-ruby", "~> 1.6.0"
 
 # Fix font assets with the CDN.
 gem "font_assets", "~> 0.1.11"
@@ -38,6 +41,7 @@ gem "unicorn-worker-killer", "~> 0.4.2"
 group :development do
   gem 'spring', '~> 1.1.3'
   gem "quiet_assets", "~> 1.0.3"
+  gem "web-console", "~> 2.0.0"
 end
 
 group :development, :test do
@@ -55,5 +59,3 @@ group :production do
   gem "rails_12factor", "~> 0.0.3"
   gem "dalli", "~> 2.7.2"
 end
-gem "skylight", "~> 0.5.1"
-gem "mixpanel-ruby", "~> 1.6.0"
