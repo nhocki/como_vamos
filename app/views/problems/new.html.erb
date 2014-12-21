@@ -6,5 +6,5 @@
   <%= f.input :title,  placeholder: "3n + 1", hint: t('.title_hint') %>
   <%= f.input :url, as: :url, placeholder: "http://example.com/problem/3n-plus-1.html" %>
   <%= f.association :categories, collection: sidebar_categories, input_html: chosen_options %>
-  <%= f.button :submit %>
+  <%= f.button :submit, data: {"disable-with" => t('application.processing')} %>
 <% end %>

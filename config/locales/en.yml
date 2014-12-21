@@ -29,6 +29,7 @@ en:
       judge:
         url: "URL"
   application:
+    processing: "Processing..."
     login_required: "You must login first."
     complete_profile:
       complete_profile: "Please complete your profile. You can do it %{profile_link}."

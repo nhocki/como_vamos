@@ -3,5 +3,5 @@
 
   <%= f.input :source_code, as: :file, hint: t('.source_code_hint', extensions: SolutionUploader.allowed_extensions.to_sentence) %>
 
-  <%= f.button :submit %>
+  <%= f.button :submit, data: {"disable-with" => t('application.processing')} %>
 <% end %>

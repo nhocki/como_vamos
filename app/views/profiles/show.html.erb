@@ -9,5 +9,5 @@
   <%= f.input :username, placeholder: "mr_smith" %>
   <%= f.input :email, placeholder: "smith@example.com" %>
 
-  <%= f.submit t('.update_btn') %>
+  <%= f.submit t('.update_btn'), data: {"disable-with" => t('application.processing')} %>
 <% end %>

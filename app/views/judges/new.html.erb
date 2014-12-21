@@ -3,5 +3,5 @@
 <%= simple_form_for @judge do |f| %>
   <%= f.input :name, placeholder: "Cómo Vamos Judge" %>
   <%= f.input :url, as: :url, placeholder: "https://judge.comovamos.co" %>
-  <%= f.button :submit %>
+  <%= f.button :submit, data: {"disable-with" => t('application.processing')} %>
 <% end %>
