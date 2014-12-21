@@ -2,11 +2,12 @@ class ProblemsController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
-    @problems = Problem.order('updated_at DESC').page(page)
+    @problems = Problem.order('updated_at DESC').includes(:judge,:categories).page(page)
   end
 
   def show
     @problem = Problem.friendly.find(params[:id])
+    @solutions = @problem.solutions.includes(:user)
   end
 
   def new
