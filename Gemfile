@@ -19,6 +19,8 @@ gem "kaminari", "~> 0.16.1"
 gem "skylight", "~> 0.5.1"
 gem "mixpanel-ruby", "~> 1.6.0"
 
+gem 'coveralls', require: false
+
 # Fix font assets with the CDN.
 gem "font_assets", "~> 0.1.11"
 
