@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def filter_problems(problems)
+    problems = problems.where(difficulty_level: params[:level]) if params[:level]
+    problems.page(page)
+  end
+
   helper_method def page
     [params[:page].to_i, 1].max
   end

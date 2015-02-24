@@ -21,6 +21,7 @@ describe "Problems" do
       fill_in 'problem_url', with: 'http://uva.onlinejudge.org/external/1/100.html'
       select judge.name, from: 'problem_judge_id'
       select category.name, from: 'problem_category_ids'
+      select I18n.t('problems.difficulties.moderate'), from: 'problem_difficulty_level'
       click_button I18n.t('helpers.submit.create', model: Problem)
       expect(page).to have_content(I18n.t('problems.create.success'))
       expect(page).to have_content('100 - 3n + 1')
@@ -29,6 +30,7 @@ describe "Problems" do
       problem = Problem.first
       expect(problem).not_to be_nil
       expect(problem.categories.pluck(:name)).to eql([ category.name ])
+      expect(problem.difficulty).to eql(I18n.t('problems.difficulties.moderate'))
     end
 
     scenario 'with errors on the form' do

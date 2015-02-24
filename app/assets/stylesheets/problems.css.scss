@@ -18,6 +18,12 @@
       margin: 0.2em 0;
       @include link($base-font-color, darken($link-color, 25));
     }
+
+    .meta{
+      display: inline-block;
+      margin: 0.7em;
+      &:first-child { margin-left: 0; }
+    }
   }
 
   .categories{
