@@ -2,8 +2,7 @@ class ProblemsController < ApplicationController
   before_action :require_login!, except: [ :index, :show ]
 
   def index
-    @problems = Problem.order('updated_at DESC').page(page)
-    @problems = @problems.where(difficulty_level: params[:level]) if params[:level]
+    @problems = filter_problems(Problem.order('updated_at DESC'))
   end
 
   def show
@@ -28,6 +27,9 @@ class ProblemsController < ApplicationController
   private
 
   def problem_params
-    params.require(:problem).permit(:difficulty_level, :judge_id, :url, :title, :number, { category_ids: [ ]})
+    permitted_args = [
+      :difficulty_level, :judge_id, :url, :title, :number, { category_ids: [ ] }
+    ]
+    params.require(:problem).permit(permitted_args)
   end
 end

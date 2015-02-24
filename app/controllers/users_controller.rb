@@ -5,6 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.friendly.find(params[:id])
-    @problems = @user.solved_problems.includes(:judge,:categories).page(page)
+    @problems = filter_problems(@user.solved_problems.includes(:judge,:categories))
   end
 end

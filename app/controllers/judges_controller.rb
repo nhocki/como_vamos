@@ -7,6 +7,7 @@ class JudgesController < ApplicationController
 
   def show
     @judge = Judge.friendly.find(params[:id])
+    @problems = filter_problems(@judge.problems)
   end
 
   def new
