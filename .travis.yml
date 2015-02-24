@@ -1,13 +1,19 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.2.0
-
+- 2.2.0
 addons:
-  postgresql: "9.3"
-
+  postgresql: '9.3'
 before_script:
-  - cp config/database.travis.yml config/database.yml
-  - RAILS_ENV=test bundle exec rake db:create db:migrate
-
-script: "bundle exec rspec"
+- cp config/database.travis.yml config/database.yml
+- RAILS_ENV=test bundle exec rake db:create db:migrate
+script: bundle exec rspec
+deploy:
+  provider: heroku
+  app:
+    master: como-vamos
+  on: master
+  run:
+    - "bundle exec rake db:migrate"
+  api_key:
+    secure: cuio/ZIxmoRMuWlCgL5O80xSTqCq/shG1DR7+fEuMBVgBqpiYHtAJlpI4Ix9z6zV1A5PPVBbva3WHSswbyzWehqhiv6LehE+WVNQpxyrKsZaQdmYnGQPVy9t8yKXQs5jyheW3iIjCtVFUY7Yiwv0uqWKCSWi5wECK7Vzulkawig=
