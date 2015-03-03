@@ -55,6 +55,10 @@
       padding-top: 18px;
       border-top: 1px solid $light-gray;
       @extend %list-border;
+      ul {
+        list-stye-type: disc;
+        padding-left: 1em;
+      }
     }
 
     .source { display: none; }
