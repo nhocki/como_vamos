@@ -20,6 +20,14 @@ class ApplicationController < ActionController::Base
 
   def login_user!(user)
     logout_user!
+    Analytics.identify(
+      user_id: user.id,
+      traits: {
+        username: user.username,
+        name: user.name,
+        registered_on: user.created_at,
+      }
+    )
     session[:user_id] = user.id
   end
 
@@ -57,5 +65,13 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_to(url = root_url, options = {})
     redirect_url = session.delete(:return_to) || url
     redirect_to redirect_url, options
+  end
+
+  def track_action(event, data = {})
+    Analytics.track(
+      user_id: current_user.id,
+      event: event,
+      properties: data
+    )
   end
 end
