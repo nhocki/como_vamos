@@ -18,6 +18,7 @@ gem "kaminari", "~> 0.16.1"
 
 gem "skylight", "~> 0.5.1"
 gem "mixpanel-ruby", "~> 1.6.0"
+gem "analytics-ruby", "~> 2.0.12", require: 'segment/analytics'
 
 gem 'coveralls', require: false
 

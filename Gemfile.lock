@@ -39,6 +39,7 @@ GEM
     airbrake (4.1.0)
       builder
       multi_json
+    analytics-ruby (2.0.12)
     arel (6.0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -322,6 +323,7 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake (~> 4.1.0)
+  analytics-ruby (~> 2.0.12)
   bitters (~> 0.10.1)
   bourbon (~> 3.2.3)
   capybara (~> 2.4.4)
