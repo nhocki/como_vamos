@@ -28,10 +28,12 @@ class ApplicationController < ActionController::Base
         registered_on: user.created_at,
       }
     )
+    track_action('Logged In', user.as_json)
     session[:user_id] = user.id
   end
 
   def logout_user!
+    track_event('Logged Out', current_user.as_json)
     @current_user = session[:user_id] = nil
   end
 
