@@ -5,4 +5,6 @@ if Rails.application.secrets.segment_key
     write_key: Rails.application.secrets.segment_key,
     on_error: Proc.new { |status, msg| Rails.logger.info{"[#{status}] #{msg}" }}
   )
+else
+  Analytics = Naught.build {|c| c.black_hole }.new
 end
