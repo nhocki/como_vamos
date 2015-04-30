@@ -70,15 +70,11 @@ class ApplicationController < ActionController::Base
   end
 
   def track_event(event, data = {})
-    begin
-      Analytics.track(
-        user_id: current_user.id,
-        event: event,
-        properties: data
-      )
-    rescue ArgumentError => e
-      Airbrake.notify_or_ignore(e)
-    end
-
+    return unless logged_in?
+    Analytics.track(
+      user_id: current_user.id,
+      event: event,
+      properties: data
+    )
   end
 end
