@@ -8,6 +8,7 @@ class SolutionsController < ApplicationController
   def create
     @solution = current_user.solutions.new(solution_params) { |s| s.problem = problem }
     if @solution.save
+      track_event('Solution Created', @solution.as_json(only: [:user_id, :problem_id, :created_at]))
       redirect_to problem, notice: I18n.t('solutions.create.success')
     else
       flash.now[:alert] = I18n.t("solutions.create.error")
@@ -22,6 +23,7 @@ class SolutionsController < ApplicationController
   def update
     @solution = current_user.solutions.where(problem: problem).find(params[:id])
     if @solution.update(solution_params)
+      track_event('Solution Updated', @solution.as_json(only: [:user_id, :problem_id, :created_at]))
       redirect_to problem, notice: I18n.t('solutions.update.success')
     else
       flash.now[:alert] = I18n.t("solutions.update.error")

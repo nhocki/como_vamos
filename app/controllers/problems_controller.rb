@@ -17,6 +17,7 @@ class ProblemsController < ApplicationController
   def create
     @problem = current_user.problems.new(problem_params)
     if @problem.save
+      track_event('Problem Created', @problem.as_json)
       redirect_to @problem, notice: I18n.t('problems.create.success')
     else
       flash.now[:alert] = I18n.t("problems.create.error")

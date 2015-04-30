@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
 
   def update
     if current_user.update(profile_params)
+      track_event("Profile Updated", current_user.as_json)
       redirect_to profile_url, notice: I18n.t("profiles.update.success")
     else
       redirect_to profile_url, alert: I18n.t("profiles.update.error")

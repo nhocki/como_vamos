@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/nhocki/como_vamos.svg?branch=master)](https://travis-ci.org/nhocki/como_vamos)
 [![Code Climate](https://codeclimate.com/github/nhocki/como_vamos/badges/gpa.svg)](https://codeclimate.com/github/nhocki/como_vamos)
-[![Coverage Status](https://img.shields.io/coveralls/nhocki/como_vamos.svg)](https://coveralls.io/r/nhocki/como_vamos)
 
 ¿Cómo Vamos? is an application to share solutions for competitive programming problems.
 
