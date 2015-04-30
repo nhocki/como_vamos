@@ -17,7 +17,7 @@ class JudgesController < ApplicationController
   def create
     @judge = Judge.new(judge_params)
     if @judge.save
-      track_action('Judge Created', @judge.as_json)
+      track_event('Judge Created', @judge.as_json)
       redirect_to @judge, notice: I18n.t("judges.create.success")
     else
       flash.now[:alert] = I18n.t("judges.create.error")

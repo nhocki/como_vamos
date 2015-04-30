@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
         registered_on: user.created_at,
       }
     )
-    track_action('Logged In', user.as_json)
+    track_event('Logged In', user.as_json)
     session[:user_id] = user.id
   end
 
@@ -69,7 +69,7 @@ class ApplicationController < ActionController::Base
     redirect_to redirect_url, options
   end
 
-  def track_action(event, data = {})
+  def track_event(event, data = {})
     Analytics.track(
       user_id: current_user.id,
       event: event,
