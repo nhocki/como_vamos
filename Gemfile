@@ -21,8 +21,6 @@ gem "mixpanel-ruby", "~> 1.6.0"
 gem "analytics-ruby", "~> 2.0.12", require: 'segment/analytics'
 gem "naught", "~> 1.0.0"
 
-gem 'coveralls', require: false
-
 # Fix font assets with the CDN.
 gem "font_assets", "~> 0.1.11"
 
