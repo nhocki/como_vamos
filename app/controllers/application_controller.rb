@@ -28,8 +28,8 @@ class ApplicationController < ActionController::Base
         registered_on: user.created_at,
       }
     )
-    track_event('Logged In', user.as_json)
     session[:user_id] = user.id
+    track_event('Logged In', user.as_json)
   end
 
   def logout_user!
@@ -70,10 +70,15 @@ class ApplicationController < ActionController::Base
   end
 
   def track_event(event, data = {})
-    Analytics.track(
-      user_id: current_user.id,
-      event: event,
-      properties: data
-    )
+    begin
+      Analytics.track(
+        user_id: current_user.id,
+        event: event,
+        properties: data
+      )
+    rescue ArgumentError => e
+      Airbrake.notify_or_ignore(e)
+    end
+
   end
 end
