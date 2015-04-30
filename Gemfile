@@ -59,5 +59,6 @@ end
 
 group :production do
   gem "rails_12factor", "~> 0.0.3"
+  gem "rails_serve_static_assets", "~> 0.0.4"
   gem "dalli", "~> 2.7.2"
 end
