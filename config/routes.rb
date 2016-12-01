@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout',  to: 'sessions#destroy', as: :logout
   get '/regwall', to: 'welcome#regwall', as: :regwall
+  get '/.well-known/acme-challenge/:id', to: 'welcome#letsencrypt'
   root 'welcome#index'
 end

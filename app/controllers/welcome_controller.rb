@@ -15,4 +15,8 @@ class WelcomeController < ApplicationController
     @full_layout = true
     @title = I18n.t('title.default')
   end
+
+  def letsencrypt
+    render text: Rails.application.secrets.letsencrypt
+  end
 end
